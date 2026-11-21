@@ -3,7 +3,29 @@
   "description": "SuperSLIM loads a compact model file (about 4.6 MB) and predicts the mean transcriptome response to knocking down a gene in learned cell systems, using only NumPy. It is a compact descendant of SLIM (Rasmussen Lab, MIT) and is not affiliated with the SLIM authors. Model files are not part of this archive because the terms of some source data are unverified.",
   "upload_type": "software",
   "license": "MIT",
-  "creators": [{"name": "Kumakura, Daiki", "orcid": "0000-0001-9859-0720"}],
-  "keywords": ["Perturb-seq", "CRISPRi", "perturbation response", "transcriptomics", "NumPy"],
-  "related_identifiers": [{"identifier": "https://github.com/RasmussenLab/SLIM", "relation": "isDerivedFrom", "scheme": "url"}]
+  "creators": [
+    {
+      "name": "Kumakura, Daiki",
+      "orcid": "0000-0001-9859-0720"
+    }
+  ],
+  "keywords": [
+    "Perturb-seq",
+    "CRISPRi",
+    "perturbation response",
+    "transcriptomics",
+    "NumPy"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/RasmussenLab/SLIM",
+      "relation": "isDerivedFrom",
+      "scheme": "url"
+    },
+    {
+      "identifier": "10.64898/2026.08.07.743481",
+      "relation": "isDerivedFrom",
+      "scheme": "doi"
+    }
+  ]
 }

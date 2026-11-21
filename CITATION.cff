@@ -19,6 +19,20 @@ keywords:
   - "perturbation response"
   - "Python"
 references:
+  - type: article
+    title: "SLIM: A small linear model with STRING embeddings for single-cell genetic perturbation prediction"
+    authors:
+      - family-names: Hu
+        given-names: Dewei
+      - family-names: Pielies Avellí
+        given-names: Marc
+      - family-names: Jensen
+        given-names: Lars Juhl
+      - family-names: Rasmussen
+        given-names: Simon
+    year: 2026
+    doi: "10.64898/2026.08.07.743481"
+    journal: bioRxiv
   - type: software
     title: "SLIM"
     authors:
