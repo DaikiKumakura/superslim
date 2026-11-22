@@ -17,7 +17,6 @@ Gates were set in advance: signal lower bound above 0.05, and error below both p
 
 A seventh candidate (hiPSC) did not pass (signal 0.049, lower bound 0.044) and is not predicted. The median response carries no target-specific signal (0.00), so the signal is what the model adds. **Read the CD4 numbers with care:** the three CD4 states come from the same experiment, so each state's prediction uses the same gene's measured response in the sibling states as input; the numbers apply to genes that are measured in a sibling state (see section 4). The genome-wide systems contain many genes with little effect, so their signals are small by nature.
 
-> Sections 2 to 5 were computed with the previous release of the model file (same design; the K562 input differed only in how it was processed). The headline table above and section 6 are for the current file; the changes in signal are at most 0.005.
 
 ## 2. Comparison with a SLIM-style baseline
 
@@ -25,17 +24,17 @@ A STRING-embedding bilinear model (our re-implementation of SLIM's recipe) train
 
 | System | Held-out targets | MAE: SLIM-style / SuperSLIM | Signal: SLIM-style / SuperSLIM |
 |---|---|---|---|
-| `k562_gwps` | 1,778 | 0.02667 / 0.02593 | 0.065 / 0.167 |
-| `hct116` | 2,430 | 0.01674 / 0.01656 | 0.024 / 0.085 |
-| `cd4_rest` | 2,031 | 0.03108 / 0.02566 | 0.024 / 0.547 |
+| `k562_gwps` | 1,778 | 0.02661 / 0.02587 | 0.065 / 0.168 |
+| `hct116` | 2,430 | 0.01674 / 0.01656 | 0.024 / 0.086 |
+| `cd4_rest` | 2,031 | 0.03108 / 0.02566 | 0.024 / 0.548 |
 
 ## 3. Ablation (signal, 95% CI)
 
 | Input / head | `k562_gwps` | `hct116` | `cd4_rest` |
 |---|---|---|---|
-| Catalog features only (linear + MLP) | 0.138 (0.129-0.148) | 0.035 (0.027-0.044) | 0.026 (0.008-0.043) |
+| Catalog features only (linear + MLP) | 0.138 (0.129-0.147) | 0.035 (0.027-0.044) | 0.026 (0.008-0.043) |
 | + responses of the same gene in the other systems (linear only) | 0.144 (0.135-0.153) | 0.078 (0.071-0.085) | 0.539 (0.530-0.548) |
-| + small MLP mixed in (released design) | 0.167 (0.158-0.177) | 0.085 (0.078-0.093) | 0.547 (0.538-0.556) |
+| + small MLP mixed in (released design) | 0.168 (0.158-0.177) | 0.086 (0.078-0.094) | 0.548 (0.539-0.557) |
 
 The other systems' responses carry most of the signal for HCT116 and the CD4 states; for K562 the catalog features already give most of it, and the MLP adds the most there (+0.02).
 
@@ -43,9 +42,9 @@ The other systems' responses carry most of the signal for HCT116 and the CD4 sta
 
 | Other systems with the gene | `k562_gwps` | `hct116` | `cd4_rest` |
 |---|---|---|---|
-| 0 | 0.090, 0.96 (n=19, few) | -0.255, 1.03 (n=1, few) | none |
-| 1 | 0.318, 0.90 (n=54) | 0.078, 0.99 (n=423) | none |
-| 2 or more | 0.163, 0.98 (n=1,705) | 0.087, 0.99 (n=2,006) | 0.547, 0.83 (n=2,031) |
+| 0 | 0.090, 0.96 (n=19, few) | -0.302, 1.04 (n=1, few) | none |
+| 1 | 0.316, 0.90 (n=54) | 0.074, 0.99 (n=423) | none |
+| 2 or more | 0.164, 0.98 (n=1,705) | 0.088, 0.99 (n=2,006) | 0.548, 0.83 (n=2,031) |
 
 Almost every held-out gene was measured in several other systems, so this cannot say how the model does for a gene measured nowhere else.
 
@@ -53,9 +52,9 @@ Almost every held-out gene was measured in several other systems, so this cannot
 
 | Training targets (share of development set) | `k562_gwps` | `hct116` | `cd4_rest` |
 |---|---|---|---|
-| 25% | 0.138 (n=1,849) | 0.076 (n=2,522) | 0.519 (n=2,113) |
-| 50% | 0.157 (n=3,698) | 0.079 (n=5,044) | 0.540 (n=4,226) |
-| 100% | 0.167 (n=7,396) | 0.085 (n=10,089) | 0.547 (n=8,453) |
+| 25% | 0.139 (n=1,849) | 0.076 (n=2,522) | 0.520 (n=2,113) |
+| 50% | 0.157 (n=3,698) | 0.078 (n=5,044) | 0.539 (n=4,226) |
+| 100% | 0.168 (n=7,396) | 0.086 (n=10,089) | 0.548 (n=8,453) |
 
 The curve is still rising at 100% for the genome-wide systems.
 
