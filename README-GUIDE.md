@@ -45,7 +45,7 @@ Output unit: change of the mean expression versus control cells (log1p counts pe
 
 [`superslim-models`](https://github.com/DaikiKumakura/superslim-models) ([DOI 10.5281/zenodo.24395561](https://doi.org/10.5281/zenodo.24395561)) holds `superslim_open_v3.npz`: K562 (genome-wide), HCT116, HEK293T, primary CD4+ T cells (rest, 8 h and 48 h stimulation) and KOLF2.1J iPSC (strong-effect targets), trained only on data with verified terms and shared under **CC BY-NC-SA 4.0** (non-commercial). **Only the systems in a model file are predicted; there is no transfer to unseen cell lines or states.** Inputs are the 21,688 catalog genes. The model card there lists the validation on held-out genes and the limits.
 
-R users: see the base-R interface [superslim-r](https://github.com/DaikiKumakura/superslim-r) (same predictions).
+R users: the base-R interface in [`r/`](r/README.md) gives the same predictions; CI checks it against golden values regenerated from the Python code of the same commit.
 
 ## Tests and benchmarks
 
@@ -78,7 +78,3 @@ Also cite SLIM if you use its design. See the [Japanese README](README_JA.md).
 This project is licensed under MIT. See [LICENSE](LICENSE) for the license terms.
 
 The separately distributed [model files](https://github.com/DaikiKumakura/superslim-models) are licensed under CC BY-NC-SA 4.0. See [data license notes](docs/DATA_LICENSES.md).
-
-## R interface
-
-The R package in [`r/`](r/README.md) gives the same predictions in base R (`pak::pak("DaikiKumakura/superslim/r")`); CI checks it against golden values regenerated from the Python code of the same commit.
