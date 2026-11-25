@@ -57,6 +57,12 @@ python benchmarks/bench_runtime.py --model model.npz   # load time, latency, thr
 - A PyPI release (the publishing workflow is prepared; it needs a PyPI account setting).
 - More systems as further data with verified terms become available.
 
-## Citation and licence
+## Citation
 
-Cite the software with [CITATION.cff](CITATION.cff) (Zenodo concept DOI 10.5281/zenodo.24393778, which always resolves to the latest version). If you use the design, also cite SLIM. Code: MIT. Model files: CC BY-NC-SA 4.0 ([docs/DATA_LICENSES.md](docs/DATA_LICENSES.md)). 日本語の説明は [README_JA.md](README_JA.md)。
+Cite the software with [CITATION.cff](CITATION.cff) (Zenodo concept DOI 10.5281/zenodo.24393778, which always resolves to the latest version). If you use the design, also cite SLIM. 日本語の説明は [README_JA.md](README_JA.md)。
+
+## License
+
+This project is licensed under MIT. See [LICENSE](LICENSE) for the license terms.
+
+The separately distributed [model files](https://github.com/DaikiKumakura/superslim-models) are licensed under CC BY-NC-SA 4.0. See [data license notes](docs/DATA_LICENSES.md).

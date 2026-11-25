@@ -24,4 +24,10 @@ superslim predict --model ~/.cache/superslim/superslim_open_v3.npz --line cd4_re
 ## 性能と根拠
 [docs/BENCHMARKS.md](docs/BENCHMARKS.md)（保留した遺伝子での精度、アブレーション、学習曲線、被覆別の精度、SLIM型との同一分割での比較、実行時間、正しさの確認）。学習標的でない遺伝子の予測は仮説として使ってください。
 
-ライセンス：コードはMIT。モデルはCC BY-NC-SA 4.0。引用は [CITATION.cff](CITATION.cff)。SLIMの考え方を使う場合はSLIMも引用してください。
+## ライセンス
+
+本プロジェクトはMITライセンスで配布します。条件は [LICENSE](LICENSE) を参照してください。別配布のモデルはCC BY-NC-SA 4.0です。
+
+## 引用
+
+引用は [CITATION.cff](CITATION.cff) を参照してください。SLIMの考え方を使う場合はSLIMも引用してください。
