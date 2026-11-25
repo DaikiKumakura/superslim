@@ -3,4 +3,4 @@ from .hub import MODELS, download_model
 from .model import Prediction, SuperSLIM
 
 __all__ = ["SuperSLIM", "Prediction", "download_model", "MODELS"]
-__version__ = "0.6.0"
+__version__ = "0.7.0"

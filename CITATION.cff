@@ -7,12 +7,12 @@ authors:
     given-names: Daiki
     orcid: "https://orcid.org/0000-0001-9859-0720"
 doi: "10.5281/zenodo.24393778"
-version: "0.6.0"
+version: "0.7.0"
 date-released: "2026-11-21"
 repository-code: "https://github.com/DaikiKumakura/superslim"
 license: MIT
 abstract: >-
-  A Python package that loads a compact SuperSLIM model file and predicts the mean transcriptome response to knocking down a gene in learned cell systems, using only NumPy. It is a compact descendant of SLIM and is not affiliated with the SLIM authors.
+  A Python package (with an R interface in r/) that loads a compact SuperSLIM model file and predicts the mean transcriptome response to knocking down a gene in learned cell systems, using only NumPy. It is a compact descendant of SLIM and is not affiliated with the SLIM authors.
 keywords:
   - "Perturb-seq"
   - "CRISPRi"

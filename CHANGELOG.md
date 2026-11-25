@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.7.0
+- Adds the R interface (`r/`, base R, same predictions as the Python package; `pak::pak("DaikiKumakura/superslim/r")`). Version numbers of the two packages are kept equal. CI runs the R checks with golden values regenerated from the Python code. No change to the Python API.
+
 ## 0.6.0
 - Default model is now `open-v3`: adds the KOLF2.1J iPSC system `kolf2_strong` (strong-effect targets only). The six earlier systems are unchanged. `open-v2` stays available.
 

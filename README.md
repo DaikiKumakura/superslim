@@ -11,6 +11,13 @@ pip install git+https://github.com/DaikiKumakura/superslim.git   # Python >= 3.9
 superslim download                                                  # fetches the model file (SHA-256 checked) into ~/.cache/superslim
 ```
 
+The same predictions are available in **R** (base R; the package lives in the [`r/`](r/) folder of this repository; version numbers follow the Python package):
+
+```r
+pak::pak("DaikiKumakura/superslim/r")
+library(superslim); m <- ss_load(ss_download("open-v3")); ss_predict(m, c("TP53", "EGFR"), "cd4_rest")
+```
+
 ## Quick start
 
 ```python
@@ -26,7 +33,7 @@ m.compare("TP53")                                # the same gene in every system
 
 ## Documentation
 
-[Usage guide](https://github.com/DaikiKumakura/superslim/blob/main/README-GUIDE.md)
+[Usage guide](https://github.com/DaikiKumakura/superslim/blob/main/README-GUIDE.md) · [R interface](r/README.md)
 
 ## Validation and limitations
 

@@ -9,6 +9,13 @@
 pip install git+https://github.com/DaikiKumakura/superslim.git
 superslim download        # モデルのファイルを取得（SHA-256を検証）
 ```
+
+Rからも同じ予測が使えます（基本のRのみ。パッケージはこのリポジトリの [`r/`](r/) フォルダにあり、版番号はPython版と同じ）。
+
+```r
+pak::pak("DaikiKumakura/superslim/r")
+library(superslim); m <- ss_load(ss_download("open-v3")); ss_predict(m, c("TP53", "EGFR"), "cd4_rest")
+```
 ```python
 from superslim import SuperSLIM, download_model
 m = SuperSLIM.load(download_model("open-v3"))

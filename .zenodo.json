@@ -1,6 +1,6 @@
 {
   "title": "SuperSLIM: a compact NumPy-only predictor of transcriptome responses to gene perturbations",
-  "description": "SuperSLIM loads a compact model file (about 4.6 MB) and predicts the mean transcriptome response to knocking down a gene in learned cell systems, using only NumPy. It is a compact descendant of SLIM (Rasmussen Lab, MIT) and is not affiliated with the SLIM authors. Model files are not part of this archive because the terms of some source data are unverified.",
+  "description": "SuperSLIM loads a compact model file (about 4.6 MB) and predicts the mean transcriptome response to knocking down a gene in learned cell systems, using only NumPy (Python) or base R (the r/ folder). It is a compact descendant of SLIM (Rasmussen Lab, MIT) and is not affiliated with the SLIM authors. Model files are not part of this archive because the terms of some source data are unverified.",
   "upload_type": "software",
   "license": "MIT",
   "creators": [

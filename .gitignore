@@ -5,3 +5,4 @@ dist/
 .pytest_cache/
 # Model files derive from third-party data with mixed terms; never commit them (see docs/DATA_LICENSES.md)
 *.npz
+!r/tests/testthat/fixtures/*.npz

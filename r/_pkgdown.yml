@@ -1,0 +1,10 @@
+url: https://daikikumakura.github.io/superslim/
+template:
+  bootstrap: 5
+reference:
+  - title: Models
+    contents: [ss_models, ss_download, ss_load, ss_info]
+  - title: Prediction
+    contents: [ss_predict, ss_top, ss_compare]
+  - title: Low level
+    contents: [read_npz]
