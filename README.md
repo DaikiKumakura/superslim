@@ -67,7 +67,11 @@ python benchmarks/bench_runtime.py --model model.npz   # load time, latency, thr
 
 ## Citation
 
-Cite the software with [CITATION.cff](CITATION.cff) (Zenodo concept DOI 10.5281/zenodo.24393778, which always resolves to the latest version). If you use the design, also cite SLIM. 日本語の説明は [README_JA.md](README_JA.md)。
+Kumakura, D. (2026). *SuperSLIM: a compact NumPy-only predictor of transcriptome responses to gene perturbations* [Software]. [DOI: 10.5281/zenodo.24393778](https://doi.org/10.5281/zenodo.24393778).
+
+Citation metadata: [CITATION.cff](CITATION.cff).
+
+Also cite SLIM if you use its design. See the [Japanese README](README_JA.md).
 
 ## License
 
