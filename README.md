@@ -37,13 +37,13 @@ superslim predict --model ~/.cache/superslim/superslim_open_v3.npz --line cd4_re
 
 Output unit: change of the mean expression versus control cells (log1p counts per 10,000 for most systems). Expression (control + change) is floored at zero, and the perturbed gene itself is set to a constant.
 
+## Documentation
+
+[Model files](#the-model-file) · [Benchmarks](docs/BENCHMARKS.md) · [日本語](README_JA.md)
+
 ## The model file
 
 [`superslim-models`](https://github.com/DaikiKumakura/superslim-models) ([DOI 10.5281/zenodo.24395561](https://doi.org/10.5281/zenodo.24395561)) holds `superslim_open_v3.npz`: K562 (genome-wide), HCT116, HEK293T, primary CD4+ T cells (rest, 8 h and 48 h stimulation) and KOLF2.1J iPSC (strong-effect targets), trained only on data with verified terms and shared under **CC BY-NC-SA 4.0** (non-commercial). **Only the systems in a model file are predicted; there is no transfer to unseen cell lines or states.** Inputs are the 21,688 catalog genes. The model card there lists the validation on held-out genes and the limits.
-
-## Evidence
-
-[docs/BENCHMARKS.md](docs/BENCHMARKS.md) reports held-out accuracy, ablation, learning curve, coverage, a same-split comparison with a SLIM-style baseline, runtime and correctness. Treat predictions for genes that were not training targets as hypotheses.
 
 ## Tests and benchmarks
 
@@ -56,6 +56,12 @@ python benchmarks/bench_runtime.py --model model.npz   # load time, latency, thr
 
 - A PyPI release (the publishing workflow is prepared; it needs a PyPI account setting).
 - More systems as further data with verified terms become available.
+
+<a id="evidence"></a>
+
+## Validation and limitations
+
+[docs/BENCHMARKS.md](docs/BENCHMARKS.md) reports held-out accuracy, ablation, learning curve, coverage, a same-split comparison with a SLIM-style baseline, runtime and correctness. Treat predictions for genes that were not training targets as hypotheses.
 
 ## Citation
 
