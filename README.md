@@ -6,14 +6,18 @@ A small, NumPy-only predictor of the **mean transcriptome response to knocking d
 
 SuperSLIM is a compact descendant of [SLIM](https://github.com/RasmussenLab/SLIM) (Rasmussen Lab, MIT licence). It keeps SLIM's idea (a low-rank map from gene knowledge to responses) and changes three things: it adds catalog features (STRING, ESM-2, Reactome, GO) next to the STRING embedding, it uses **the responses of the same gene in the other systems** as input, and it predicts a 24-dimensional latent response with a ridge-linear map mixed with a small INT8 MLP. SuperSLIM is an independent project and is **not affiliated with the SLIM authors**.
 
-## Install
+<a id="install"></a>
+
+## Installation
 
 ```bash
 pip install git+https://github.com/DaikiKumakura/superslim.git   # Python >= 3.9, NumPy only
 superslim download                                                  # fetches the model file (SHA-256 checked) into ~/.cache/superslim
 ```
 
-## Use
+<a id="use"></a>
+
+## Quick start
 
 ```python
 from superslim import SuperSLIM, download_model
