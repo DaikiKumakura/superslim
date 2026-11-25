@@ -16,6 +16,13 @@ MODELS: Dict[str, Dict[str, object]] = {
         "filename": "superslim_open_v2.npz",
         "bytes": 4180253,
         "license": "CC BY-NC-SA 4.0 (non-commercial); see https://github.com/DaikiKumakura/superslim-models",
+    },
+    "open-v3": {
+        "url": "https://github.com/DaikiKumakura/superslim-models/releases/download/v3.0.0/superslim_open_v3.npz",
+        "sha256": "a3bf0c575eef4d93d97c58e71b49b296195c25890ee1795236751aed8353c098",
+        "filename": "superslim_open_v3.npz",
+        "bytes": 4725210,
+        "license": "CC BY-NC-SA 4.0 (non-commercial); see https://github.com/DaikiKumakura/superslim-models",
     }
 }
 
@@ -32,7 +39,7 @@ def _sha256(path: Path) -> str:
     return h.hexdigest()
 
 
-def download_model(name: str = "open-v2", dest: Optional[str] = None, force: bool = False) -> Path:
+def download_model(name: str = "open-v3", dest: Optional[str] = None, force: bool = False) -> Path:
     """Download a released model file (default: the open-data model) and return its path. The file is verified against its SHA-256."""
     if name not in MODELS:
         raise ValueError(f"Unknown model '{name}'. Available: {', '.join(MODELS)}")

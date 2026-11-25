@@ -1,6 +1,6 @@
 # Benchmarks
 
-Everything here concerns the released model `superslim_open_v2.npz` (4,180,253 bytes; repository [`superslim-models`](https://github.com/DaikiKumakura/superslim-models)). Two quantities are reported per held-out target: **MAE** over output genes, and **target-specific signal**, the correlation of the predicted and observed response after subtracting each gene's mean over targets (excluding the perturbed gene itself). Intervals are 95% bootstrap intervals over targets. Training used only development targets; held-out targets (about 20%) were split by a hash of the gene name, and settings were chosen by cross-validation inside the development targets. The released model is retrained on all targets, so these numbers describe the design on held-out genes, not the released fit.
+Everything here concerns the released model `superslim_open_v3.npz` (4,725,210 bytes; repository [`superslim-models`](https://github.com/DaikiKumakura/superslim-models)). Two quantities are reported per held-out target: **MAE** over output genes, and **target-specific signal**, the correlation of the predicted and observed response after subtracting each gene's mean over targets (excluding the perturbed gene itself). Intervals are 95% bootstrap intervals over targets. Training used only development targets; held-out targets (about 20%) were split by a hash of the gene name, and settings were chosen by cross-validation inside the development targets. The released model is retrained on all targets, so these numbers describe the design on held-out genes, not the released fit.
 
 ## 1. Held-out accuracy of every system
 
@@ -14,8 +14,9 @@ Gates were set in advance: signal lower bound above 0.05, and error below both p
 | `cd4_rest` | 2,031 | 0.548 (0.539-0.557) | -17.47% | -16.84% |
 | `cd4_stim8hr` | 2,038 | 0.555 (0.547-0.562) | -16.79% | -16.32% |
 | `cd4_stim48hr` | 2,035 | 0.521 (0.513-0.530) | -14.81% | -14.44% |
+| `kolf2_strong` | 287 | 0.201 (0.172-0.228) | -12.75% | -2.04% |
 
-A seventh candidate (hiPSC) did not pass (signal 0.049, lower bound 0.044) and is not predicted. The median response carries no target-specific signal (0.00), so the signal is what the model adds. **Read the CD4 numbers with care:** the three CD4 states come from the same experiment, so each state's prediction uses the same gene's measured response in the sibling states as input; the numbers apply to genes that are measured in a sibling state (see section 4). The genome-wide systems contain many genes with little effect, so their signals are small by nature.
+`kolf2_strong` covers strong-effect targets only (the source file keeps perturbations that differ significantly from non-targeting cells), so its numbers are not comparable with the genome-wide systems; it is a predicted system only and is not an input source for the others. A further candidate (hiPSC) did not pass (signal 0.049, lower bound 0.044) and is not predicted. The median response carries no target-specific signal (0.00), so the signal is what the model adds. **Read the CD4 numbers with care:** the three CD4 states come from the same experiment, so each state's prediction uses the same gene's measured response in the sibling states as input; the numbers apply to genes that are measured in a sibling state (see section 4). The genome-wide systems contain many genes with little effect, so their signals are small by nature.
 
 
 ## 2. Comparison with a SLIM-style baseline
@@ -60,23 +61,24 @@ The curve is still rising at 100% for the genome-wide systems.
 
 ## 6. Runtime
 
-Windows 11, 12 logical CPUs, Python 3.12, NumPy 2.2, SuperSLIM 0.5.0.
+Windows 11, 12 logical CPUs, Python 3.12, NumPy 2.2, SuperSLIM 0.6.0.
 
 | Quantity | Value |
 |---|---|
-| Model file | 4,180,253 bytes |
-| Load (median of 5) | 281 ms |
-| Peak memory, all systems used | 107 MB |
+| Model file | 4,725,210 bytes |
+| Load (median of 5) | 357 ms |
+| Peak memory, all systems used | 117 MB |
 | Repeat calls and fresh load | bit-identical output, all values finite |
 
 | System | Output genes | One gene (ms, median) | Genes per second (batch of 1,000) |
 |---|---|---|---|
-| `k562_gwps` | 8,248 | 0.32 | 17,171 |
-| `hct116` | 14,685 | 0.78 | 11,824 |
-| `hek293t` | 14,685 | 0.77 | 11,549 |
-| `cd4_rest` | 6,089 | 0.29 | 22,342 |
-| `cd4_stim8hr` | 6,089 | 0.29 | 20,638 |
-| `cd4_stim48hr` | 6,089 | 0.29 | 20,217 |
+| `k562_gwps` | 8,248 | 0.55 | 9,889 |
+| `hct116` | 14,685 | 1.42 | 5,804 |
+| `hek293t` | 14,685 | 1.60 | 6,483 |
+| `cd4_rest` | 6,089 | 0.93 | 17,208 |
+| `cd4_stim8hr` | 6,089 | 0.52 | 13,447 |
+| `cd4_stim48hr` | 6,089 | 0.85 | 13,847 |
+| `kolf2_strong` | 15,419 | 1.96 | 7,633 |
 Reproduce: `python benchmarks/bench_runtime.py --model model.npz`.
 
 ## 7. Correctness

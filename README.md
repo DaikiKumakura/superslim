@@ -22,7 +22,7 @@ superslim download                                                  # fetches th
 ```python
 from superslim import SuperSLIM, download_model
 
-m = SuperSLIM.load(download_model("open-v2"))   # or SuperSLIM.load("path/to/model.npz")
+m = SuperSLIM.load(download_model("open-v3"))   # or SuperSLIM.load("path/to/model.npz")
 m.info()                                         # systems, input genes, output genes per system
 res = m.predict(["TP53", "EGFR"], line="cd4_rest")
 res.values.shape                                 # (2, number of output genes)
@@ -31,15 +31,15 @@ m.compare("TP53")                                # the same gene in every system
 ```
 
 ```bash
-superslim info    --model ~/.cache/superslim/superslim_open_v2.npz
-superslim predict --model ~/.cache/superslim/superslim_open_v2.npz --line cd4_rest --gene TP53 --gene EGFR --out out.csv
+superslim info    --model ~/.cache/superslim/superslim_open_v3.npz
+superslim predict --model ~/.cache/superslim/superslim_open_v3.npz --line cd4_rest --gene TP53 --gene EGFR --out out.csv
 ```
 
 Output unit: change of the mean expression versus control cells (log1p counts per 10,000 for most systems). Expression (control + change) is floored at zero, and the perturbed gene itself is set to a constant.
 
 ## The model file
 
-[`superslim-models`](https://github.com/DaikiKumakura/superslim-models) ([DOI 10.5281/zenodo.24395561](https://doi.org/10.5281/zenodo.24395561)) holds `superslim_open_v2.npz`: K562 (genome-wide), HCT116, HEK293T and primary CD4+ T cells (rest, 8 h and 48 h stimulation), trained only on data with verified terms and shared under **CC BY-NC-SA 4.0** (non-commercial). **Only the systems in a model file are predicted; there is no transfer to unseen cell lines or states.** Inputs are the 21,688 catalog genes. The model card there lists the validation on held-out genes and the limits.
+[`superslim-models`](https://github.com/DaikiKumakura/superslim-models) ([DOI 10.5281/zenodo.24395561](https://doi.org/10.5281/zenodo.24395561)) holds `superslim_open_v3.npz`: K562 (genome-wide), HCT116, HEK293T, primary CD4+ T cells (rest, 8 h and 48 h stimulation) and KOLF2.1J iPSC (strong-effect targets), trained only on data with verified terms and shared under **CC BY-NC-SA 4.0** (non-commercial). **Only the systems in a model file are predicted; there is no transfer to unseen cell lines or states.** Inputs are the 21,688 catalog genes. The model card there lists the validation on held-out genes and the limits.
 
 ## Evidence
 
