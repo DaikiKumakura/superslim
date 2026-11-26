@@ -31,6 +31,22 @@ res.top("EGFR", n=10, direction="down")          # most strongly decreased genes
 m.compare("TP53")                                # the same gene in every system (each in its own output genes and units)
 ```
 
+Printed by these calls with the `open-v3` model (the top-10 call shown with `n=5`):
+
+```text
+m.info()         {'systems': ['k562_gwps', 'hct116', 'hek293t', 'cd4_rest', 'cd4_stim8hr', 'cd4_stim48hr', 'kolf2_strong'],
+                  'n_input_genes': 21688, 'n_output_genes': {'k562_gwps': 8248, 'hct116': 14685, 'hek293t': 14685,
+                  'cd4_rest': 6089, 'cd4_stim8hr': 6089, 'cd4_stim48hr': 6089, 'kolf2_strong': 15419}}
+res.values.shape (2, 6089)
+res.top("EGFR", n=5, direction="down")
+                 [('HSPD1', -0.2310), ('MYBL2', -0.2273), ('RRM2', -0.2253), ('TYMS', -0.2236), ('CDK1', -0.2164)]
+m.compare("TP53") a dict with one entry per system
+```
+
+Each value is the predicted change of the mean expression of that gene when the target is knocked down
+(negative: decreased). Rows of `res.values` are the genes you asked for, columns the output genes of the chosen
+system. The first call downloads the 4.7 MB model once (SHA-256 checked) and reuses the cached file.
+
 ## Documentation
 
 [Usage guide](https://github.com/DaikiKumakura/superslim/blob/main/README-GUIDE.md) · [R interface](r/README.md)
