@@ -28,6 +28,8 @@ ss_compare(m, "TP53")               # the same gene in every system (each in its
 
 `p$values` is a matrix with one row per gene and one column per output gene. Nothing is downloaded unless `ss_download()` is called; the file is cached in `tools::R_user_dir("superslim", "cache")` (or the folder in the environment variable `SUPERSLIM_HOME`).
 
+A step-by-step walk through, with the output of every call and how to read it: [TUTORIAL.md](TUTORIAL.md).
+
 ## The model files
 
 [`superslim-models`](https://github.com/DaikiKumakura/superslim-models) ([DOI 10.5281/zenodo.24395561](https://doi.org/10.5281/zenodo.24395561)) holds the files, trained only on data with verified terms and shared under **CC BY-NC-SA 4.0** (non-commercial). **Only the systems in a model file are predicted; there is no transfer to unseen cell lines or states.** Predictions for genes that were training targets are fitted values, and predictions for genes never measured are hypotheses. The model card lists the validation on held-out genes and the limits.
