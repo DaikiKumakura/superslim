@@ -61,29 +61,29 @@ The curve is still rising at 100% for the genome-wide systems.
 
 ## 6. Runtime
 
-Windows 11, 12 logical CPUs, Python 3.12, NumPy 2.2, SuperSLIM 0.6.0.
+Windows 11, 12 logical CPUs, Python 3.12, NumPy 2.2, SuperSLIM 0.7.0.
 
 | Quantity | Value |
 |---|---|
 | Model file | 4,725,210 bytes |
-| Load (median of 5) | 357 ms |
-| Peak memory, all systems used | 117 MB |
+| Load (median of 5) | 316 ms |
+| Peak memory, all systems used | 118 MB |
 | Repeat calls and fresh load | bit-identical output, all values finite |
 
 | System | Output genes | One gene (ms, median) | Genes per second (batch of 1,000) |
 |---|---|---|---|
-| `k562_gwps` | 8,248 | 0.55 | 9,889 |
-| `hct116` | 14,685 | 1.42 | 5,804 |
-| `hek293t` | 14,685 | 1.60 | 6,483 |
-| `cd4_rest` | 6,089 | 0.93 | 17,208 |
-| `cd4_stim8hr` | 6,089 | 0.52 | 13,447 |
-| `cd4_stim48hr` | 6,089 | 0.85 | 13,847 |
-| `kolf2_strong` | 15,419 | 1.96 | 7,633 |
+| `k562_gwps` | 8,248 | 0.33 | 17,532 |
+| `hct116` | 14,685 | 0.87 | 8,316 |
+| `hek293t` | 14,685 | 0.90 | 11,189 |
+| `cd4_rest` | 6,089 | 0.29 | 21,966 |
+| `cd4_stim8hr` | 6,089 | 0.29 | 21,925 |
+| `cd4_stim48hr` | 6,089 | 0.29 | 23,081 |
+| `kolf2_strong` | 15,419 | 0.88 | 10,335 |
 Reproduce: `python benchmarks/bench_runtime.py --model model.npz`.
 
 ## 7. Correctness
 
-- The package output equals an independent NumPy re-implementation written from the raw arrays (maximum absolute difference 0) for all six systems, and is bit-identical across repeated calls and fresh loads (`verification.json` in the model repository).
+- The package output equals an independent NumPy re-implementation written from the raw arrays (maximum absolute difference 0) for all seven systems, and is bit-identical across repeated calls and fresh loads (`verification.json` in the model repository).
 - Nine synthetic-model tests, including fixed expected values and the command line, run in CI on Linux, Windows and macOS for Python 3.9-3.13, and with the oldest supported NumPy (1.22).
 
 ## 8. Limits

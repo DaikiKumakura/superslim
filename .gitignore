@@ -6,3 +6,4 @@ dist/
 # Model files derive from third-party data with mixed terms; never commit them (see docs/DATA_LICENSES.md)
 *.npz
 !r/tests/testthat/fixtures/*.npz
+r/tests/testthat/fixtures/golden_real.npz

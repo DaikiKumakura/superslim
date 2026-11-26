@@ -44,11 +44,13 @@ test_that("non-model files are rejected and the registry is consistent", {
   expect_error(ss_download("nosuch"), "Unknown model")
 })
 
-test_that("the released model matches the Python package (optional)", {
+test_that("the released model matches the Python package (needs SUPERSLIM_MODEL and fixtures/golden_real.npz; run in CI)", {
   path <- Sys.getenv("SUPERSLIM_MODEL", unset = "")
-  skip_if(!nzchar(path) || !file.exists(path), "set SUPERSLIM_MODEL to a model file to run this test")
-  m <- ss_load(path)
-  expect_gt(length(ss_lines(m)), 0L)
-  p <- ss_predict(m, c("TP53", "EGFR"), ss_lines(m)[1])
-  expect_true(all(is.finite(p$values)))
+  gold <- fx("golden_real.npz")
+  skip_if(!nzchar(path) || !file.exists(path) || !file.exists(gold), "set SUPERSLIM_MODEL and run r/tools/make_real_golden.py to enable this test")
+  m <- ss_load(path); g <- read_npz(gold)
+  for (line in ss_lines(m)) {
+    p <- ss_predict(m, g$genes, line)
+    expect_equal(unname(p$values), unname(g[[line]]), tolerance = 1e-5, label = line)
+  }
 })
