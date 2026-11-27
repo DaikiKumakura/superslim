@@ -4,7 +4,7 @@
 \alias{ss_download}
 \title{Download a released model file}
 \usage{
-ss_download(name = "open-v3", dest = NULL, force = FALSE)
+ss_download(name = "open-v4", dest = NULL, force = FALSE)
 }
 \arguments{
 \item{name}{A name from \code{\link[=ss_models]{ss_models()}}. The default is the newest model.}
