@@ -1,6 +1,9 @@
 # SuperSLIM
 
-[![tests](https://github.com/DaikiKumakura/superslim/actions/workflows/ci.yml/badge.svg)](https://github.com/DaikiKumakura/superslim/actions/workflows/ci.yml) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24393778.svg)](https://doi.org/10.5281/zenodo.24393778)
+<!-- badges: start -->
+[![tests](https://github.com/DaikiKumakura/superslim/actions/workflows/ci.yml/badge.svg)](https://github.com/DaikiKumakura/superslim/actions/workflows/ci.yml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24393778.svg)](https://doi.org/10.5281/zenodo.24393778)
+<!-- badges: end -->
 
 A small, NumPy-only predictor of the **mean transcriptome response to knocking down a gene** in a fixed set of learned cell systems. The model file is about 4 MB; on a laptop CPU it loads in about 0.3 s, predicts one gene in about 0.3 to 0.9 ms (depending on the number of output genes), and needs about 120 MB of memory. No GPU, no PyTorch, no scikit-learn at inference time.
 

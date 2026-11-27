@@ -1,6 +1,10 @@
 # superslim (R)
 
+<!-- badges: start -->
+[![R-universe](https://daikikumakura.r-universe.dev/badges/superslim)](https://daikikumakura.r-universe.dev/superslim)
 [![R-CMD-check](https://github.com/DaikiKumakura/superslim/actions/workflows/r-ci.yml/badge.svg)](https://github.com/DaikiKumakura/superslim/actions/workflows/r-ci.yml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24393778.svg)](https://doi.org/10.5281/zenodo.24393778)
+<!-- badges: end -->
 
 R interface to **SuperSLIM**: it predicts the mean change in gene expression after knocking down a gene, in the cell systems learned in a small pretrained model file. The inference is written in base R and returns the same values as the [Python package](https://github.com/DaikiKumakura/superslim) in the same repository (maximum difference below 1e-6 on the released model). SuperSLIM is a compact descendant of SLIM (RasmussenLab, MIT) and is not affiliated with the SLIM authors.
 
