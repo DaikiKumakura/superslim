@@ -1,6 +1,7 @@
 # superslim 0.8.0
 
 * Default model is now `open-v4` (ten systems, adds `rpe1_essential`, `jurkat_essential`, `hepg2_essential`); `open-v2` and `open-v3` stay available. Version numbers follow the Python package.
+* Model files are now downloaded from the releases of this repository; versions 0.7.0 and earlier pointed to the removed `superslim-models` repository and can no longer download models.
 
 # superslim 0.7.0
 
