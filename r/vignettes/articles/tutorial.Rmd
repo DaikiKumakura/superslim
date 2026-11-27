@@ -1,4 +1,10 @@
-# Predict what happens when you knock down a gene
+---
+title: "Predict what happens when you knock down a gene"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(eval = FALSE)
+```
 
 superslim answers one question: if I knock down gene X in cell system Y, which genes change in their mean
 expression, and by how much? The answer comes from a small pretrained file, in base R, in a fraction of a second
@@ -7,7 +13,7 @@ running the code.
 
 ## 1. Get the model
 
-```r
+```{r}
 library(superslim)
 
 ss_models()[, c("name", "bytes")]
@@ -19,7 +25,7 @@ ss_models()[, c("name", "bytes")]
 2 open-v3 4725210
 ```
 
-```r
+```{r}
 path <- ss_download("open-v3")   # downloads once (4.7 MB), checks the SHA-256, keeps it in a cache folder
 m <- ss_load(path)               # about 2 seconds
 ```
@@ -30,7 +36,7 @@ CC BY-NC-SA 4.0 (non-commercial).
 
 ## 2. What the model covers
 
-```r
+```{r}
 ss_lines(m)
 ss_info(m)$n_input_genes
 ss_info(m)$n_output_genes
@@ -53,7 +59,7 @@ ss_info(m)$n_output_genes
 
 ## 3. Predict
 
-```r
+```{r}
 p <- ss_predict(m, c("TP53", "EGFR"), line = "cd4_rest")
 dim(p$values)
 rownames(p$values)
@@ -70,7 +76,7 @@ the predicted change of that gene's mean expression compared with control cells,
 
 ## 4. Read the result
 
-```r
+```{r}
 ss_top(p, "EGFR", n = 5)                      # most strongly decreased
 ss_top(p, "EGFR", n = 5, direction = "up")    # most strongly increased
 ```
@@ -98,7 +104,7 @@ proliferation genes (`MYBL2`, `RRM2`, `TYMS`, `CDK1`). This is a prediction to b
 
 Effects depend on the system. `ss_compare()` predicts one gene in all seven, each in its own output genes:
 
-```r
+```{r}
 cmp <- ss_compare(m, "TP53")
 names(cmp)
 sapply(cmp, function(x) length(x$values))
@@ -114,7 +120,7 @@ sapply(cmp, function(x) length(x$values))
 Each element is the prediction for that system (`line`, `genes`, `output_genes`, `values`). Compare the size of
 the effect in two systems:
 
-```r
+```{r}
 ss_top(ss_predict(m, "TP53", "cd4_rest"),  "TP53", n = 3)
 ss_top(ss_predict(m, "TP53", "k562_gwps"), "TP53", n = 3)
 ```
@@ -138,7 +144,7 @@ another without a reason. The units can differ between systems too.
 
 How much two systems agree on a gene is a question you can ask with ordinary R:
 
-```r
+```{r}
 a <- ss_top(ss_predict(m, "EGFR", "k562_gwps"), "EGFR", n = 200)$gene
 b <- ss_top(ss_predict(m, "EGFR", "hct116"),    "EGFR", n = 200)$gene
 length(intersect(a, b))
@@ -154,7 +160,7 @@ Of the 200 most decreased genes after EGFR knockdown, 67 are the same in K562 an
 
 ## 6. Errors tell you what to change
 
-```r
+```{r}
 ss_predict(m, "NOTAGENE", "cd4_rest")
 ss_predict(m, "TP53", "nosuchline")
 ```

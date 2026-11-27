@@ -32,7 +32,7 @@ ss_compare(m, "TP53")               # the same gene in every system (each in its
 
 `p$values` is a matrix with one row per gene and one column per output gene. Nothing is downloaded unless `ss_download()` is called; the file is cached in `tools::R_user_dir("superslim", "cache")` (or the folder in the environment variable `SUPERSLIM_HOME`).
 
-A step-by-step walk through, with the output of every call and how to read it: [TUTORIAL.md](TUTORIAL.md).
+A step-by-step walk through, with the output of every call and how to read it: [the tutorial](https://daikikumakura.github.io/superslim/articles/tutorial.html).
 
 ## The model files
 

@@ -8,3 +8,8 @@ reference:
     contents: [ss_predict, ss_top, ss_compare]
   - title: Low level
     contents: [read_npz]
+articles:
+  - title: Articles
+    navbar: ~
+    contents:
+      - articles/tutorial

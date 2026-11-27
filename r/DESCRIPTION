@@ -5,7 +5,7 @@ Version: 0.8.0
 Authors@R: person("Daiki", "Kumakura", email = "55353329+DaikiKumakura@users.noreply.github.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-9859-0720"))
 Description: Reads the compact SuperSLIM model files ('.npz', format 'superslim-open-v1') and predicts the mean change in gene expression after knocking down a gene, in the cell systems learned in the file. The inference is written in base R and gives the same values as the Python package 'superslim'. SuperSLIM is a compact descendant of SLIM and is not affiliated with the SLIM authors. Model files are distributed separately under CC BY-NC-SA 4.0.
 License: MIT + file LICENSE
-URL: https://github.com/DaikiKumakura/superslim
+URL: https://daikikumakura.github.io/superslim/, https://github.com/DaikiKumakura/superslim
 BugReports: https://github.com/DaikiKumakura/superslim/issues
 Depends: R (>= 4.1.0)
 Imports: archive, utils
