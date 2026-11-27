@@ -21,9 +21,9 @@ The only dependency is the CRAN package [archive](https://cran.r-project.org/pac
 
 ```r
 library(superslim)
-path <- ss_download("open-v3")      # downloads once (4.7 MB), checks the SHA-256
+path <- ss_download("open-v4")      # downloads once (5.9 MB), checks the SHA-256
 m <- ss_load(path)                  # about 2 seconds
-ss_lines(m)                         # k562_gwps, hct116, hek293t, cd4_rest, cd4_stim8hr, cd4_stim48hr, kolf2_strong
+ss_lines(m)                         # k562_gwps, hct116, hek293t, cd4_rest, cd4_stim8hr, cd4_stim48hr, kolf2_strong, rpe1_essential, jurkat_essential, hepg2_essential
 
 p <- ss_predict(m, c("TP53", "EGFR"), line = "cd4_rest")
 ss_top(p, "EGFR", n = 10)           # most strongly decreased genes
@@ -36,7 +36,7 @@ A step-by-step walk through, with the output of every call and how to read it: [
 
 ## The model files
 
-[`superslim-models`](https://github.com/DaikiKumakura/superslim-models) ([DOI 10.5281/zenodo.24395561](https://doi.org/10.5281/zenodo.24395561)) holds the files, trained only on data with verified terms and shared under **CC BY-NC-SA 4.0** (non-commercial). **Only the systems in a model file are predicted; there is no transfer to unseen cell lines or states.** Predictions for genes that were training targets are fitted values, and predictions for genes never measured are hypotheses. The model card lists the validation on held-out genes and the limits.
+The model files (documented in [`models/`](https://github.com/DaikiKumakura/superslim/tree/main/models), archived as [DOI 10.5281/zenodo.24395561](https://doi.org/10.5281/zenodo.24395561); attached to the releases) were trained only on data with verified terms and shared under **CC BY-NC-SA 4.0** (non-commercial). **Only the systems in a model file are predicted; there is no transfer to unseen cell lines or states.** Predictions for genes that were training targets are fitted values, and predictions for genes never measured are hypotheses. The model card lists the validation on held-out genes and the limits.
 
 ## Tests
 

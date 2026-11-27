@@ -171,5 +171,5 @@ Unknown system 'nosuchline'. Available: k562_gwps, hct116, hek293t, cd4_rest, cd
   starting points for an experiment.
 - The R and Python packages return the same values (maximum difference below 1e-6 on the released model), so a
   result from one can be rechecked in the other.
-- [Model card and validation](https://github.com/DaikiKumakura/superslim-models) and
+- [Model card and validation](https://github.com/DaikiKumakura/superslim/tree/main/models) and
   [benchmarks](https://github.com/DaikiKumakura/superslim/blob/main/docs/BENCHMARKS.md).

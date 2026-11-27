@@ -14,19 +14,19 @@ Rからも同じ予測が使えます（基本のRのみ。パッケージはこ
 
 ```r
 pak::pak("DaikiKumakura/superslim/r")
-library(superslim); m <- ss_load(ss_download("open-v3")); ss_predict(m, c("TP53", "EGFR"), "cd4_rest")
+library(superslim); m <- ss_load(ss_download("open-v4")); ss_predict(m, c("TP53", "EGFR"), "cd4_rest")
 ```
 ```python
 from superslim import SuperSLIM, download_model
-m = SuperSLIM.load(download_model("open-v3"))
+m = SuperSLIM.load(download_model("open-v4"))
 res = m.predict(["TP53", "EGFR"], line="cd4_rest")
 ```
 ```bash
-superslim predict --model ~/.cache/superslim/superslim_open_v3.npz --line cd4_rest --gene TP53 --out out.csv
+superslim predict --model ~/.cache/superslim/superslim_open_v4.npz --line cd4_rest --gene TP53 --out out.csv
 ```
 
 ## モデルのファイル
-[`superslim-models`](https://github.com/DaikiKumakura/superslim-models)（[DOI 10.5281/zenodo.24395561](https://doi.org/10.5281/zenodo.24395561)）の `superslim_open_v3.npz`：K562（ゲノム規模）、HCT116、HEK293T、初代CD4+ T細胞（安静・8時間・48時間刺激）、KOLF2.1J iPSC（強い応答の標的のみ）。利用条件を確認したデータだけで学習し、**CC BY-NC-SA 4.0（非商用）**で共有しています。**モデルのファイルにある系だけが予測でき、未知の細胞系・状態の予測はできません。** 保留した遺伝子での検証と限界はモデルカードにあります。
+モデルファイル `superslim_open_v4.npz`（リリースに添付。説明は [`models/`](https://github.com/DaikiKumakura/superslim/tree/main/models)、アーカイブは [DOI 10.5281/zenodo.24395561](https://doi.org/10.5281/zenodo.24395561)）：K562（ゲノム規模）、HCT116、HEK293T、初代CD4+ T細胞（安静・8時間・48時間刺激）、KOLF2.1J iPSC（強い応答の標的のみ）、RPE1・Jurkat・HepG2（必須遺伝子のみ）。利用条件を確認したデータだけで学習し、**CC BY-NC-SA 4.0（非商用）**で共有しています。**モデルのファイルにある系だけが予測でき、未知の細胞系・状態の予測はできません。** 保留した遺伝子での検証と限界はモデルカードにあります。
 
 ## 性能と根拠
 [docs/BENCHMARKS.md](docs/BENCHMARKS.md)（保留した遺伝子での精度、アブレーション、学習曲線、被覆別の精度、SLIM型との同一分割での比較、実行時間、正しさの確認）。学習標的でない遺伝子の予測は仮説として使ってください。

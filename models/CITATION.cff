@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use these model files, please cite this archive, the SuperSLIM package and the data sources listed in ATTRIBUTION.md."
+type: dataset
+title: "SuperSLIM models: trained model files built from data with verified terms"
+authors:
+  - family-names: Kumakura
+    given-names: Daiki
+    orcid: "https://orcid.org/0000-0001-9859-0720"
+doi: "10.5281/zenodo.24395561"
+version: "4.0.0"
+date-released: "2026-11-21"
+license: CC-BY-NC-SA-4.0
+repository-code: "https://github.com/DaikiKumakura/superslim/tree/main/models"
+abstract: >-
+  Trained model files for the SuperSLIM package. superslim_open_v4.npz predicts the mean transcriptome response to knocking down a gene in K562, HCT116, HEK293T, primary CD4+ T cells, KOLF2.1J iPSC, and RPE1, Jurkat and HepG2 essential-gene screens, and was trained only on data whose terms were verified. Non-commercial use (CC BY-NC-SA 4.0).
+keywords:
+  - "Perturb-seq"
+  - "CRISPRi"
+  - "perturbation response"
+references:
+  - type: article
+    title: "SLIM: A small linear model with STRING embeddings for single-cell genetic perturbation prediction"
+    authors:
+      - family-names: Hu
+        given-names: Dewei
+      - family-names: Pielies Avellí
+        given-names: Marc
+      - family-names: Jensen
+        given-names: Lars Juhl
+      - family-names: Rasmussen
+        given-names: Simon
+    year: 2026
+    doi: "10.64898/2026.08.07.743481"
+    journal: bioRxiv

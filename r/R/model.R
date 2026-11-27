@@ -22,7 +22,7 @@ unpack_q4 <- function(packed, scale, nrow, ncol) {
 #' @return An object of class `superslim_model`.
 #' @examples
 #' \dontrun{
-#' m <- ss_load(ss_download("open-v3"))
+#' m <- ss_load(ss_download("open-v4"))
 #' m
 #' }
 #' @export
@@ -117,7 +117,7 @@ mlp_forward <- function(z, line, Xs) {
 #'   (a matrix with one row per gene and one column per output gene).
 #' @examples
 #' \dontrun{
-#' m <- ss_load(ss_download("open-v3"))
+#' m <- ss_load(ss_download("open-v4"))
 #' p <- ss_predict(m, c("TP53", "EGFR"), "cd4_rest")
 #' ss_top(p, "EGFR", n = 10)
 #' }

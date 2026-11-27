@@ -11,18 +11,25 @@ from typing import Dict, Optional
 
 MODELS: Dict[str, Dict[str, object]] = {
     "open-v2": {
-        "url": "https://github.com/DaikiKumakura/superslim-models/releases/download/v2.0.0/superslim_open_v2.npz",
+        "url": "https://github.com/DaikiKumakura/superslim/releases/download/v0.8.0/superslim_open_v2.npz",
         "sha256": "88dd09321133f4a562b29ae1b631dd63d0f9d5e5bb39a85d3f2361af5f924321",
         "filename": "superslim_open_v2.npz",
         "bytes": 4180253,
-        "license": "CC BY-NC-SA 4.0 (non-commercial); see https://github.com/DaikiKumakura/superslim-models",
+        "license": "CC BY-NC-SA 4.0 (non-commercial); see https://github.com/DaikiKumakura/superslim/tree/main/models",
     },
     "open-v3": {
-        "url": "https://github.com/DaikiKumakura/superslim-models/releases/download/v3.0.0/superslim_open_v3.npz",
+        "url": "https://github.com/DaikiKumakura/superslim/releases/download/v0.8.0/superslim_open_v3.npz",
         "sha256": "a3bf0c575eef4d93d97c58e71b49b296195c25890ee1795236751aed8353c098",
         "filename": "superslim_open_v3.npz",
         "bytes": 4725210,
-        "license": "CC BY-NC-SA 4.0 (non-commercial); see https://github.com/DaikiKumakura/superslim-models",
+        "license": "CC BY-NC-SA 4.0 (non-commercial); see https://github.com/DaikiKumakura/superslim/tree/main/models",
+    },
+    "open-v4": {
+        "url": "https://github.com/DaikiKumakura/superslim/releases/download/v0.8.0/superslim_open_v4.npz",
+        "sha256": "f2daaaf286ca93aa7b2f9e48264f3aa245a82f08c6d813e34be1e773ab761b92",
+        "filename": "superslim_open_v4.npz",
+        "bytes": 5891974,
+        "license": "CC BY-NC-SA 4.0 (non-commercial); see https://github.com/DaikiKumakura/superslim/tree/main/models",
     }
 }
 
@@ -39,7 +46,7 @@ def _sha256(path: Path) -> str:
     return h.hexdigest()
 
 
-def download_model(name: str = "open-v3", dest: Optional[str] = None, force: bool = False) -> Path:
+def download_model(name: str = "open-v4", dest: Optional[str] = None, force: bool = False) -> Path:
     """Download a released model file (default: the open-data model) and return its path. The file is verified against its SHA-256."""
     if name not in MODELS:
         raise ValueError(f"Unknown model '{name}'. Available: {', '.join(MODELS)}")

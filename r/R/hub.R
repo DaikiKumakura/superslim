@@ -1,12 +1,16 @@
 ss_registry <- list(
   "open-v2" = list(
-    url = "https://github.com/DaikiKumakura/superslim-models/releases/download/v2.0.0/superslim_open_v2.npz",
+    url = "https://github.com/DaikiKumakura/superslim/releases/download/v0.8.0/superslim_open_v2.npz",
     sha256 = "88dd09321133f4a562b29ae1b631dd63d0f9d5e5bb39a85d3f2361af5f924321",
     filename = "superslim_open_v2.npz", bytes = 4180253),
   "open-v3" = list(
-    url = "https://github.com/DaikiKumakura/superslim-models/releases/download/v3.0.0/superslim_open_v3.npz",
+    url = "https://github.com/DaikiKumakura/superslim/releases/download/v0.8.0/superslim_open_v3.npz",
     sha256 = "a3bf0c575eef4d93d97c58e71b49b296195c25890ee1795236751aed8353c098",
-    filename = "superslim_open_v3.npz", bytes = 4725210)
+    filename = "superslim_open_v3.npz", bytes = 4725210),
+  "open-v4" = list(
+    url = "https://github.com/DaikiKumakura/superslim/releases/download/v0.8.0/superslim_open_v4.npz",
+    sha256 = "f2daaaf286ca93aa7b2f9e48264f3aa245a82f08c6d813e34be1e773ab761b92",
+    filename = "superslim_open_v4.npz", bytes = 5891974)
 )
 
 file_sha256 <- function(path) {
@@ -31,7 +35,7 @@ ss_models <- function() {
 
 #' Download a released model file
 #'
-#' Downloads a model file from the 'superslim-models' releases and checks its SHA-256. Nothing is downloaded unless this
+#' Downloads a model file from the 'superslim' releases and checks its SHA-256. Nothing is downloaded unless this
 #' function is called. Model files are licensed CC BY-NC-SA 4.0 (non-commercial, share-alike); see the model repository
 #' for the terms of the training data.
 #'
@@ -45,7 +49,7 @@ ss_models <- function() {
 #' path <- ss_download("open-v3")
 #' }
 #' @export
-ss_download <- function(name = "open-v3", dest = NULL, force = FALSE) {
+ss_download <- function(name = "open-v4", dest = NULL, force = FALSE) {
   if (!name %in% names(ss_registry)) stop("Unknown model '", name, "'. Available: ", paste(names(ss_registry), collapse = ", "), call. = FALSE)
   spec <- ss_registry[[name]]
   if (is.null(dest)) {

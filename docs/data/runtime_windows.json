@@ -1,143 +1,200 @@
 {
- "superslim": "0.7.0",
+ "superslim": "0.8.0",
  "python": "3.12.4",
  "numpy": "2.2.6",
  "platform": "Windows-11-10.0.26300-SP0",
  "cpu_count": 12,
- "model_bytes": 4725210,
- "load_ms_median": 316.02480000583455,
- "peak_memory_mb_after_all_systems": 117.74609375,
+ "model_bytes": 5891974,
+ "load_ms_median": 746.9892000081018,
+ "peak_memory_mb_after_all_systems": 129.3828125,
  "systems": {
   "k562_gwps": {
    "n_output_genes": 8248,
-   "single_gene_ms_median": 0.332399969920516,
-   "single_gene_ms_p95": 0.3803599800448864,
+   "single_gene_ms_median": 0.6327999872155488,
+   "single_gene_ms_p95": 1.5423049975652243,
    "batch": {
     "10": {
-     "genes_per_second": 5960.185857911626,
+     "genes_per_second": 4676.830888835756,
      "output_values_mb": 0.31463623046875
     },
     "100": {
-     "genes_per_second": 11386.27954134895,
+     "genes_per_second": 9039.139463582338,
      "output_values_mb": 3.1463623046875
     },
     "1000": {
-     "genes_per_second": 17532.294478738295,
+     "genes_per_second": 12030.350168822251,
      "output_values_mb": 31.463623046875
     }
    }
   },
   "hct116": {
    "n_output_genes": 14685,
-   "single_gene_ms_median": 0.8718500030227005,
-   "single_gene_ms_p95": 1.0141300386749208,
+   "single_gene_ms_median": 1.7545000009704381,
+   "single_gene_ms_p95": 2.172475031693466,
    "batch": {
     "10": {
-     "genes_per_second": 3271.82307064952,
+     "genes_per_second": 1841.9598610731402,
      "output_values_mb": 0.5601882934570312
     },
     "100": {
-     "genes_per_second": 8626.564624442663,
+     "genes_per_second": 5882.802808571433,
      "output_values_mb": 5.6018829345703125
     },
     "1000": {
-     "genes_per_second": 8316.423273326624,
+     "genes_per_second": 7598.420439653987,
      "output_values_mb": 56.018829345703125
     }
    }
   },
   "hek293t": {
    "n_output_genes": 14685,
-   "single_gene_ms_median": 0.9031500085256994,
-   "single_gene_ms_p95": 1.2041849957313382,
+   "single_gene_ms_median": 2.0172499935142696,
+   "single_gene_ms_p95": 2.1819899935508147,
    "batch": {
     "10": {
-     "genes_per_second": 2152.2965058315153,
+     "genes_per_second": 1924.5573578471679,
      "output_values_mb": 0.5601882934570312
     },
     "100": {
-     "genes_per_second": 9570.934941726156,
+     "genes_per_second": 6398.44391042812,
      "output_values_mb": 5.6018829345703125
     },
     "1000": {
-     "genes_per_second": 11189.011499447592,
+     "genes_per_second": 7963.660227070482,
      "output_values_mb": 56.018829345703125
     }
    }
   },
   "cd4_rest": {
    "n_output_genes": 6089,
-   "single_gene_ms_median": 0.2922499552369118,
-   "single_gene_ms_p95": 0.342894991626963,
+   "single_gene_ms_median": 0.7031500281300396,
+   "single_gene_ms_p95": 1.0113200172781944,
    "batch": {
     "10": {
-     "genes_per_second": 3615.7211709705302,
+     "genes_per_second": 2239.1401636299975,
      "output_values_mb": 0.23227691650390625
     },
     "100": {
-     "genes_per_second": 19434.83497612297,
+     "genes_per_second": 11456.06599512448,
      "output_values_mb": 2.3227691650390625
     },
     "1000": {
-     "genes_per_second": 21965.518542602164,
+     "genes_per_second": 16147.132680499475,
      "output_values_mb": 23.227691650390625
     }
    }
   },
   "cd4_stim8hr": {
    "n_output_genes": 6089,
-   "single_gene_ms_median": 0.28864998603239655,
-   "single_gene_ms_p95": 0.35197001707274456,
+   "single_gene_ms_median": 0.8851000166032463,
+   "single_gene_ms_p95": 0.9958750044461339,
    "batch": {
     "10": {
-     "genes_per_second": 6004.563497414349,
+     "genes_per_second": 3427.0047485122886,
      "output_values_mb": 0.23227691650390625
     },
     "100": {
-     "genes_per_second": 16805.02815748904,
+     "genes_per_second": 10999.164040521562,
      "output_values_mb": 2.3227691650390625
     },
     "1000": {
-     "genes_per_second": 21925.16067120646,
+     "genes_per_second": 16107.49497189418,
      "output_values_mb": 23.227691650390625
     }
    }
   },
   "cd4_stim48hr": {
    "n_output_genes": 6089,
-   "single_gene_ms_median": 0.2873499761335552,
-   "single_gene_ms_p95": 0.31493500573560596,
+   "single_gene_ms_median": 0.5542500002775341,
+   "single_gene_ms_p95": 0.8510900021065025,
    "batch": {
     "10": {
-     "genes_per_second": 6282.985627286651,
+     "genes_per_second": 4338.959573216889,
      "output_values_mb": 0.23227691650390625
     },
     "100": {
-     "genes_per_second": 17661.603550112148,
+     "genes_per_second": 12222.548219084683,
      "output_values_mb": 2.3227691650390625
     },
     "1000": {
-     "genes_per_second": 23081.415057095735,
+     "genes_per_second": 15152.364597286802,
      "output_values_mb": 23.227691650390625
     }
    }
   },
   "kolf2_strong": {
    "n_output_genes": 15419,
-   "single_gene_ms_median": 0.8802500087767839,
-   "single_gene_ms_p95": 0.981059981859289,
+   "single_gene_ms_median": 2.0081999828107655,
+   "single_gene_ms_p95": 2.1848450152901933,
    "batch": {
     "10": {
-     "genes_per_second": 3031.1297247653265,
+     "genes_per_second": 2336.1211054402556,
      "output_values_mb": 0.5881881713867188
     },
     "100": {
-     "genes_per_second": 6850.722737013294,
+     "genes_per_second": 6724.904358057741,
      "output_values_mb": 5.8818817138671875
     },
     "1000": {
-     "genes_per_second": 10335.137507549009,
+     "genes_per_second": 7900.928675007506,
      "output_values_mb": 58.818817138671875
+    }
+   }
+  },
+  "rpe1_essential": {
+   "n_output_genes": 8749,
+   "single_gene_ms_median": 1.0007000237237662,
+   "single_gene_ms_p95": 1.1363799712853504,
+   "batch": {
+    "10": {
+     "genes_per_second": 1911.863105642058,
+     "output_values_mb": 0.33374786376953125
+    },
+    "100": {
+     "genes_per_second": 8815.699001377929,
+     "output_values_mb": 3.3374786376953125
+    },
+    "1000": {
+     "genes_per_second": 10748.030691001353,
+     "output_values_mb": 33.374786376953125
+    }
+   }
+  },
+  "jurkat_essential": {
+   "n_output_genes": 8882,
+   "single_gene_ms_median": 1.0729500208981335,
+   "single_gene_ms_p95": 1.2002950272290036,
+   "batch": {
+    "10": {
+     "genes_per_second": 2680.8932754476523,
+     "output_values_mb": 0.3388214111328125
+    },
+    "100": {
+     "genes_per_second": 8229.775305639201,
+     "output_values_mb": 3.388214111328125
+    },
+    "1000": {
+     "genes_per_second": 11255.962846842114,
+     "output_values_mb": 33.88214111328125
+    }
+   }
+  },
+  "hepg2_essential": {
+   "n_output_genes": 9624,
+   "single_gene_ms_median": 0.6406500178854913,
+   "single_gene_ms_p95": 1.0197650117333978,
+   "batch": {
+    "10": {
+     "genes_per_second": 3352.4422403757635,
+     "output_values_mb": 0.36712646484375
+    },
+    "100": {
+     "genes_per_second": 8433.19642603912,
+     "output_values_mb": 3.6712646484375
+    },
+    "1000": {
+     "genes_per_second": 10211.281628601695,
+     "output_values_mb": 36.712646484375
     }
    }
   }

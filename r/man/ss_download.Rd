@@ -18,7 +18,7 @@ directory of this package.}
 The path of the verified file.
 }
 \description{
-Downloads a model file from the 'superslim-models' releases and checks its SHA-256. Nothing is downloaded unless this
+Downloads a model file from the 'superslim' releases and checks its SHA-256. Nothing is downloaded unless this
 function is called. Model files are licensed CC BY-NC-SA 4.0 (non-commercial, share-alike); see the model repository
 for the terms of the training data.
 }

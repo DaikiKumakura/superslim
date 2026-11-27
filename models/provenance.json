@@ -1,0 +1,207 @@
+{
+  "systems": {
+    "k562_gwps": {
+      "license": "CC BY 4.0 (Zenodo 13350497)",
+      "inputs": [
+        {
+          "file": "data/external/k562_gwps_means_log.npz",
+          "sha256": "734a0d4b52d4b520eebe64433a570e0c1549c1ada80306a28da239361f5d2c14"
+        }
+      ],
+      "n_train_targets": 9174,
+      "validated": {
+        "signal": 0.16752833182996912,
+        "signal_ci": [
+          0.1581375155229692,
+          0.17701387528853677
+        ],
+        "gain_vs_zero_percent": 2.7216848737243624,
+        "gain_vs_base_percent": 2.405197198049191
+      }
+    },
+    "hct116": {
+      "license": "CC BY-NC-SA 4.0 (X-Atlas/Orion)",
+      "inputs": [
+        {
+          "file": "data/external/orion/orion_HCT116_delta.npz",
+          "sha256": "7c9ff9bd0dd9e4557183551bb564a621cbfe9ad87815fee89cc8d0ef188a47e2"
+        }
+      ],
+      "n_train_targets": 12519,
+      "validated": {
+        "signal": 0.08568418650669853,
+        "signal_ci": [
+          0.07769810145796721,
+          0.09387921160317733
+        ],
+        "gain_vs_zero_percent": 1.0298396397805052,
+        "gain_vs_base_percent": 0.8634993869915613
+      }
+    },
+    "hek293t": {
+      "license": "CC BY-NC-SA 4.0 (X-Atlas/Orion)",
+      "inputs": [
+        {
+          "file": "data/external/orion/orion_HEK293T_delta.npz",
+          "sha256": "aaec78dbc6d39eaf0d8036c77fe3a4d5c52526f7e50029f8f5e119b442b44f0e"
+        }
+      ],
+      "n_train_targets": 13128,
+      "validated": {
+        "signal": 0.10366002983567237,
+        "signal_ci": [
+          0.09070044251462797,
+          0.11694281498166778
+        ],
+        "gain_vs_zero_percent": 1.1328613487012513,
+        "gain_vs_base_percent": 0.9703962186795219
+      }
+    },
+    "cd4_rest": {
+      "license": "MIT with use terms (CZ Virtual Cell Models)",
+      "inputs": [
+        {
+          "file": "data/external/cd4_marson/cd4_Rest_pseudobulk.npz",
+          "sha256": "c4932bca72d151d24aaee690e5bc155c7780a69749c2dbb66c8b06a4ac2e5adb"
+        }
+      ],
+      "n_train_targets": 10484,
+      "validated": {
+        "signal": 0.5479550087662045,
+        "signal_ci": [
+          0.5386829167878519,
+          0.5569663907075273
+        ],
+        "gain_vs_zero_percent": 17.47251918507529,
+        "gain_vs_base_percent": 16.83886018990736
+      }
+    },
+    "cd4_stim8hr": {
+      "license": "MIT with use terms (CZ Virtual Cell Models)",
+      "inputs": [
+        {
+          "file": "data/external/cd4_marson/cd4_Stim8hr_pseudobulk.npz",
+          "sha256": "f07ad94ac193e9a79282ad39d7761fdd5d78b39326dd87d2abc40a075869648e"
+        }
+      ],
+      "n_train_targets": 10549,
+      "validated": {
+        "signal": 0.554637986518012,
+        "signal_ci": [
+          0.5473422123567112,
+          0.5620845463014841
+        ],
+        "gain_vs_zero_percent": 16.793364110898846,
+        "gain_vs_base_percent": 16.318065964429536
+      }
+    },
+    "cd4_stim48hr": {
+      "license": "MIT with use terms (CZ Virtual Cell Models)",
+      "inputs": [
+        {
+          "file": "data/external/cd4_marson/cd4_Stim48hr_pseudobulk.npz",
+          "sha256": "baab31e2fe66a2c781880bf913115b06a3818c011d161cb0dd4209cfca615aa1"
+        }
+      ],
+      "n_train_targets": 10523,
+      "validated": {
+        "signal": 0.5214615739534999,
+        "signal_ci": [
+          0.5127665386169238,
+          0.5303227096063106
+        ],
+        "gain_vs_zero_percent": 14.80811320693874,
+        "gain_vs_base_percent": 14.441601892179659
+      }
+    },
+    "kolf2_strong": {
+      "license": "CC BY 4.0 (figshare+ 27261219, KOLF2.1J strong perturbations)",
+      "inputs": [
+        {
+          "file": "data/external/kolf2_1j/kolf2_strong_means_log.npz",
+          "sha256": "5e756baa50893785d90f941156cf5a3fc5e3e4670784694a5d60e2854a193d3e"
+        }
+      ],
+      "n_train_targets": 1525,
+      "validated": {
+        "signal": 0.2007546573041403,
+        "signal_ci": [
+          0.171518354357574,
+          0.22813505592363575
+        ],
+        "gain_vs_zero_percent": 12.754129757316164,
+        "gain_vs_base_percent": 2.0352206918444553
+      }
+    },
+    "rpe1_essential": {
+      "license": "CC BY 4.0 (scPerturb Zenodo 13350497; Replogle 2022 RPE1)",
+      "inputs": [
+        {
+          "file": "data/external/scperturb/rpe1_essential_means_log.npz",
+          "sha256": "65a2dced81d0c98f57cb9acbe96efc3b04eac20ef86c611dda73a57ca7aa16d9"
+        }
+      ],
+      "n_train_targets": 2012,
+      "validated": {
+        "signal": 0.48051586095061927,
+        "signal_ci": [
+          0.44437394051695744,
+          0.5151430123092845
+        ],
+        "gain_vs_zero_percent": 21.103021640757177,
+        "gain_vs_base_percent": 13.268808449260696
+      }
+    },
+    "jurkat_essential": {
+      "license": "CC BY 4.0 as redistributed by scPerturb (Zenodo 13350497; Nadig 2024 Jurkat; original GEO GSE264667 states no separate licence)",
+      "inputs": [
+        {
+          "file": "data/external/scperturb/jurkat_essential_means_log.npz",
+          "sha256": "9fd59fc1c1fe3c54069b9fc59daf1e92e31ec6842897a334c0b5b139c0d6b954"
+        }
+      ],
+      "n_train_targets": 2134,
+      "validated": {
+        "signal": 0.36906567873599694,
+        "signal_ci": [
+          0.34430982477794486,
+          0.39279166605128535
+        ],
+        "gain_vs_zero_percent": 10.733571980294062,
+        "gain_vs_base_percent": 8.064722437048621
+      }
+    },
+    "hepg2_essential": {
+      "license": "CC BY 4.0 as redistributed by scPerturb (Zenodo 13350497; Nadig 2024 HepG2; original GEO GSE264667 states no separate licence)",
+      "inputs": [
+        {
+          "file": "data/external/scperturb/hepg2_essential_means_log.npz",
+          "sha256": "c189aa31d8f32e58bc63b456e59ce8cd1a5ba726c07a79d90f53c08a566e2b6b"
+        }
+      ],
+      "n_train_targets": 1817,
+      "validated": {
+        "signal": 0.4199155767328833,
+        "signal_ci": [
+          0.38862272878333326,
+          0.4508945205397905
+        ],
+        "gain_vs_zero_percent": 15.409276331036237,
+        "gain_vs_base_percent": 12.211209312655754
+      }
+    }
+  },
+  "features": "features_pca.npz X_full (STRING, ESM-2, Reactome, GO; responses_used False)",
+  "source_only_inputs": {
+    "hipsc": {
+      "license": "MIT (figshare 26819743)",
+      "note": "response codes used as input features of the predicted systems; not a predicted system",
+      "inputs": [
+        {
+          "file": "data/external/hipsci_crispri/hipsci_lfc.npz",
+          "sha256": "0eb21dcfed9d297e452a3419548c6f0336187e520282f8d4e5b177e2c128b30f"
+        }
+      ]
+    }
+  }
+}

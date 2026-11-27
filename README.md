@@ -18,7 +18,7 @@ The same predictions are available in **R** (base R; the package lives in the [`
 
 ```r
 pak::pak("DaikiKumakura/superslim/r")
-library(superslim); m <- ss_load(ss_download("open-v3")); ss_predict(m, c("TP53", "EGFR"), "cd4_rest")
+library(superslim); m <- ss_load(ss_download("open-v4")); ss_predict(m, c("TP53", "EGFR"), "cd4_rest")
 ```
 
 ## Quick start
@@ -26,7 +26,7 @@ library(superslim); m <- ss_load(ss_download("open-v3")); ss_predict(m, c("TP53"
 ```python
 from superslim import SuperSLIM, download_model
 
-m = SuperSLIM.load(download_model("open-v3"))   # or SuperSLIM.load("path/to/model.npz")
+m = SuperSLIM.load(download_model("open-v4"))   # or SuperSLIM.load("path/to/model.npz")
 m.info()                                         # systems, input genes, output genes per system
 res = m.predict(["TP53", "EGFR"], line="cd4_rest")
 res.values.shape                                 # (2, number of output genes)
@@ -34,7 +34,7 @@ res.top("EGFR", n=10, direction="down")          # most strongly decreased genes
 m.compare("TP53")                                # the same gene in every system (each in its own output genes and units)
 ```
 
-Printed by these calls with the `open-v3` model (the top-10 call shown with `n=5`):
+Printed by these calls with the `open-v4` model (the top-10 call shown with `n=5`):
 
 ```text
 m.info()         {'systems': ['k562_gwps', 'hct116', 'hek293t', 'cd4_rest', 'cd4_stim8hr', 'cd4_stim48hr', 'kolf2_strong'],
@@ -73,4 +73,4 @@ Also cite SLIM if you use its design. See the [Japanese README](README_JA.md).
 
 This project is licensed under MIT. See [LICENSE](LICENSE) for the license terms.
 
-The separately distributed [model files](https://github.com/DaikiKumakura/superslim-models) are licensed under CC BY-NC-SA 4.0. See [data license notes](docs/DATA_LICENSES.md).
+The model files, attached to the releases and documented in [`models/`](https://github.com/DaikiKumakura/superslim/tree/main/models), are licensed under CC BY-NC-SA 4.0. See [data license notes](docs/DATA_LICENSES.md).

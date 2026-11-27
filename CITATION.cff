@@ -7,8 +7,8 @@ authors:
     given-names: Daiki
     orcid: "https://orcid.org/0000-0001-9859-0720"
 doi: "10.5281/zenodo.24393778"
-version: "0.7.0"
-date-released: "2026-11-21"
+version: "0.8.0"
+date-released: "2026-11-27"
 repository-code: "https://github.com/DaikiKumakura/superslim"
 license: MIT
 abstract: >-

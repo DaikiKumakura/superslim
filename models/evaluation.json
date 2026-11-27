@@ -1,0 +1,497 @@
+{
+ "k562_gwps": {
+  "system": "k562_gwps",
+  "license": "CC BY 4.0 (Zenodo 13350497)",
+  "n_targets": 9174,
+  "n_genes": 8248,
+  "n_dev": 7396,
+  "n_final": 1778,
+  "dev": {
+   "best": "lam1.0|s1.5|a0.5",
+   "best_mae": 0.026067534554985256,
+   "base_mae": 0.026864198610214177
+  },
+  "final": {
+   "mae": 0.02586842803127344,
+   "zero_mae": 0.026592183466267887,
+   "base_mae": 0.026505948358508658,
+   "signal": 0.16752833182996912,
+   "signal_ci": [
+    0.1581375155229692,
+    0.17701387528853677
+   ],
+   "gain_vs_zero_percent": 2.7216848737243624,
+   "gain_vs_zero_ci": [
+    2.256614077754502,
+    3.2037679666339867
+   ],
+   "gain_vs_base_percent": 2.405197198049191,
+   "gain_vs_base_ci": [
+    1.955105063135938,
+    2.8676650425733157
+   ],
+   "base_signal": 0.0020759792113884488
+  },
+  "gates": {
+   "G1": true,
+   "G2": true,
+   "G3": true
+  },
+  "adopt": true,
+  "hyper": {
+   "lam_mult": 1.0,
+   "s": 1.5,
+   "alpha": 0.5
+  }
+ },
+ "hct116": {
+  "system": "hct116",
+  "license": "CC BY-NC-SA 4.0 (X-Atlas/Orion)",
+  "n_targets": 12519,
+  "n_genes": 14685,
+  "n_dev": 10089,
+  "n_final": 2430,
+  "dev": {
+   "best": "lam0.3|s1.5|a0.5",
+   "best_mae": 0.016775652379431776,
+   "base_mae": 0.016976081558798088
+  },
+  "final": {
+   "mae": 0.016555462329400302,
+   "zero_mae": 0.01672773113546927,
+   "base_mae": 0.016699663824151504,
+   "signal": 0.08568418650669853,
+   "signal_ci": [
+    0.07769810145796721,
+    0.09387921160317733
+   ],
+   "gain_vs_zero_percent": 1.0298396397805052,
+   "gain_vs_zero_ci": [
+    0.7708606232262943,
+    1.30260993227021
+   ],
+   "gain_vs_base_percent": 0.8634993869915613,
+   "gain_vs_base_ci": [
+    0.6031670947008995,
+    1.128779480870675
+   ],
+   "base_signal": 0.0007964598215859896
+  },
+  "gates": {
+   "G1": true,
+   "G2": true,
+   "G3": true
+  },
+  "adopt": true,
+  "hyper": {
+   "lam_mult": 0.3,
+   "s": 1.5,
+   "alpha": 0.5
+  }
+ },
+ "hek293t": {
+  "system": "hek293t",
+  "license": "CC BY-NC-SA 4.0 (X-Atlas/Orion)",
+  "n_targets": 13128,
+  "n_genes": 14685,
+  "n_dev": 10586,
+  "n_final": 2542,
+  "dev": {
+   "best": "lam0.3|s1.5|a0.25",
+   "best_mae": 0.01658751301843567,
+   "base_mae": 0.016793808447566526
+  },
+  "final": {
+   "mae": 0.016350887852202112,
+   "zero_mae": 0.01653824321736586,
+   "base_mae": 0.016511111049488325,
+   "signal": 0.10366002983567237,
+   "signal_ci": [
+    0.09070044251462797,
+    0.11694281498166778
+   ],
+   "gain_vs_zero_percent": 1.1328613487012513,
+   "gain_vs_zero_ci": [
+    0.9312820491750088,
+    1.3372573096538105
+   ],
+   "gain_vs_base_percent": 0.9703962186795219,
+   "gain_vs_base_ci": [
+    0.778423709921662,
+    1.1708639167610246
+   ],
+   "base_signal": 0.0006234981334234771
+  },
+  "gates": {
+   "G1": true,
+   "G2": true,
+   "G3": true
+  },
+  "adopt": true,
+  "hyper": {
+   "lam_mult": 0.3,
+   "s": 1.5,
+   "alpha": 0.25
+  }
+ },
+ "cd4_rest": {
+  "system": "cd4_rest",
+  "license": "MIT with use terms (CZ Virtual Cell Models)",
+  "n_targets": 10484,
+  "n_genes": 6089,
+  "n_dev": 8453,
+  "n_final": 2031,
+  "dev": {
+   "best": "lam0.3|s1.5|a0.5",
+   "best_mae": 0.026096157297469356,
+   "base_mae": 0.031159743329609944
+  },
+  "final": {
+   "mae": 0.025657165375934918,
+   "zero_mae": 0.031089238545247023,
+   "base_mae": 0.030852349347935588,
+   "signal": 0.5479550087662045,
+   "signal_ci": [
+    0.5386829167878519,
+    0.5569663907075273
+   ],
+   "gain_vs_zero_percent": 17.47251918507529,
+   "gain_vs_zero_ci": [
+    16.814051246433653,
+    18.126007898961728
+   ],
+   "gain_vs_base_percent": 16.83886018990736,
+   "gain_vs_base_ci": [
+    16.181521001505153,
+    17.513173860944377
+   ],
+   "base_signal": 0.0025664649208809857
+  },
+  "gates": {
+   "G1": true,
+   "G2": true,
+   "G3": true
+  },
+  "adopt": true,
+  "hyper": {
+   "lam_mult": 0.3,
+   "s": 1.5,
+   "alpha": 0.5
+  }
+ },
+ "cd4_stim8hr": {
+  "system": "cd4_stim8hr",
+  "license": "MIT with use terms (CZ Virtual Cell Models)",
+  "n_targets": 10549,
+  "n_genes": 6089,
+  "n_dev": 8511,
+  "n_final": 2038,
+  "dev": {
+   "best": "lam0.3|s1.5|a0.5",
+   "best_mae": 0.02330291759398334,
+   "base_mae": 0.02770077217321007
+  },
+  "final": {
+   "mae": 0.02282157010157021,
+   "zero_mae": 0.027427584179688613,
+   "base_mae": 0.027271800496233164,
+   "signal": 0.554637986518012,
+   "signal_ci": [
+    0.5473422123567112,
+    0.5620845463014841
+   ],
+   "gain_vs_zero_percent": 16.793364110898846,
+   "gain_vs_zero_ci": [
+    16.297866512425347,
+    17.29182398207028
+   ],
+   "gain_vs_base_percent": 16.318065964429536,
+   "gain_vs_base_ci": [
+    15.807961680164627,
+    16.849553750605324
+   ],
+   "base_signal": 0.0011972362717346243
+  },
+  "gates": {
+   "G1": true,
+   "G2": true,
+   "G3": true
+  },
+  "adopt": true,
+  "hyper": {
+   "lam_mult": 0.3,
+   "s": 1.5,
+   "alpha": 0.5
+  }
+ },
+ "cd4_stim48hr": {
+  "system": "cd4_stim48hr",
+  "license": "MIT with use terms (CZ Virtual Cell Models)",
+  "n_targets": 10523,
+  "n_genes": 6089,
+  "n_dev": 8488,
+  "n_final": 2035,
+  "dev": {
+   "best": "lam0.3|s1.5|a0.5",
+   "best_mae": 0.02372275255770802,
+   "base_mae": 0.027724070442054015
+  },
+  "final": {
+   "mae": 0.023180610607274825,
+   "zero_mae": 0.027209880517827485,
+   "base_mae": 0.027093320024602043,
+   "signal": 0.5214615739534999,
+   "signal_ci": [
+    0.5127665386169238,
+    0.5303227096063106
+   ],
+   "gain_vs_zero_percent": 14.80811320693874,
+   "gain_vs_zero_ci": [
+    14.227774542591835,
+    15.378010360509215
+   ],
+   "gain_vs_base_percent": 14.441601892179659,
+   "gain_vs_base_ci": [
+    13.869416587708065,
+    15.020221316984719
+   ],
+   "base_signal": 0.0007653929811022649
+  },
+  "gates": {
+   "G1": true,
+   "G2": true,
+   "G3": true
+  },
+  "adopt": true,
+  "hyper": {
+   "lam_mult": 0.3,
+   "s": 1.5,
+   "alpha": 0.5
+  }
+ },
+ "kolf2_strong": {
+  "system": "kolf2_strong",
+  "license": "CC BY 4.0 (figshare+ 27261219, KOLF2.1J strong perturbations)",
+  "n_targets": 1525,
+  "n_genes": 15419,
+  "n_dev": 1238,
+  "n_final": 287,
+  "dev": {
+   "best": "lam0.3|s1.5|a0.25",
+   "best_mae": 0.14598225755738453,
+   "base_mae": 0.14922601350487952
+  },
+  "final": {
+   "mae": 0.14438574692041267,
+   "zero_mae": 0.16549292994475048,
+   "base_mae": 0.14738536435246435,
+   "signal": 0.2007546573041403,
+   "signal_ci": [
+    0.171518354357574,
+    0.22813505592363575
+   ],
+   "gain_vs_zero_percent": 12.754129757316164,
+   "gain_vs_zero_ci": [
+    11.703246323923251,
+    13.849450147323486
+   ],
+   "gain_vs_base_percent": 2.0352206918444553,
+   "gain_vs_base_ci": [
+    1.471708618795353,
+    2.614724990614494
+   ],
+   "base_signal": 0.0038477033679834368
+  },
+  "gates": {
+   "G1": true,
+   "G2": true,
+   "G3": true
+  },
+  "adopt": true,
+  "hyper": {
+   "lam_mult": 0.3,
+   "s": 1.5,
+   "alpha": 0.25
+  }
+ },
+ "rpe1_essential": {
+  "system": "rpe1_essential",
+  "license": "CC BY 4.0 (scPerturb Zenodo 13350497; Replogle 2022 RPE1)",
+  "n_targets": 2012,
+  "n_genes": 8749,
+  "n_dev": 1634,
+  "n_final": 378,
+  "dev": {
+   "best": "lam0.3|s1.5|a0.5",
+   "best_mae": 0.04307937659587903,
+   "base_mae": 0.04994355488358112
+  },
+  "final": {
+   "mae": 0.044208719447715615,
+   "zero_mae": 0.05603347601782589,
+   "base_mae": 0.05097211125233154,
+   "signal": 0.48051586095061927,
+   "signal_ci": [
+    0.44437394051695744,
+    0.5151430123092845
+   ],
+   "gain_vs_zero_percent": 21.103021640757177,
+   "gain_vs_zero_ci": [
+    18.634753199365118,
+    23.414202183034767
+   ],
+   "gain_vs_base_percent": 13.268808449260696,
+   "gain_vs_base_ci": [
+    10.935965168973253,
+    15.531293196362247
+   ],
+   "base_signal": 0.004965589860944333
+  },
+  "gates": {
+   "G1": true,
+   "G2": true,
+   "G3": true
+  },
+  "adopt": true,
+  "hyper": {
+   "lam_mult": 0.3,
+   "s": 1.5,
+   "alpha": 0.5
+  }
+ },
+ "jurkat_essential": {
+  "system": "jurkat_essential",
+  "license": "CC BY 4.0 as redistributed by scPerturb (Zenodo 13350497; Nadig 2024 Jurkat; original GEO GSE264667 states no separate licence)",
+  "n_targets": 2134,
+  "n_genes": 8882,
+  "n_dev": 1738,
+  "n_final": 396,
+  "dev": {
+   "best": "lam1.0|s1.5|a0.5",
+   "best_mae": 0.03938695351771775,
+   "base_mae": 0.043331769066036016
+  },
+  "final": {
+   "mae": 0.04030724085902806,
+   "zero_mae": 0.04515386327559792,
+   "base_mae": 0.04384306212751492,
+   "signal": 0.36906567873599694,
+   "signal_ci": [
+    0.34430982477794486,
+    0.39279166605128535
+   ],
+   "gain_vs_zero_percent": 10.733571980294062,
+   "gain_vs_zero_ci": [
+    9.190951400388274,
+    12.294568862498465
+   ],
+   "gain_vs_base_percent": 8.064722437048621,
+   "gain_vs_base_ci": [
+    6.7861568751409695,
+    9.367994399788738
+   ],
+   "base_signal": 0.011050941571587852
+  },
+  "gates": {
+   "G1": true,
+   "G2": true,
+   "G3": true
+  },
+  "adopt": true,
+  "hyper": {
+   "lam_mult": 1.0,
+   "s": 1.5,
+   "alpha": 0.5
+  }
+ },
+ "hepg2_essential": {
+  "system": "hepg2_essential",
+  "license": "CC BY 4.0 as redistributed by scPerturb (Zenodo 13350497; Nadig 2024 HepG2; original GEO GSE264667 states no separate licence)",
+  "n_targets": 1817,
+  "n_genes": 9624,
+  "n_dev": 1487,
+  "n_final": 330,
+  "dev": {
+   "best": "lam1.0|s1.5|a0.5",
+   "best_mae": 0.040399956583807545,
+   "base_mae": 0.045880435942663084
+  },
+  "final": {
+   "mae": 0.04086505572601705,
+   "zero_mae": 0.0483091454400341,
+   "base_mae": 0.04654928653882028,
+   "signal": 0.4199155767328833,
+   "signal_ci": [
+    0.38862272878333326,
+    0.4508945205397905
+   ],
+   "gain_vs_zero_percent": 15.409276331036237,
+   "gain_vs_zero_ci": [
+    12.781956361377958,
+    17.94721030249414
+   ],
+   "gain_vs_base_percent": 12.211209312655754,
+   "gain_vs_base_ci": [
+    9.906693113668688,
+    14.447217187072164
+   ],
+   "base_signal": 0.00488322552104443
+  },
+  "gates": {
+   "G1": true,
+   "G2": true,
+   "G3": true
+  },
+  "adopt": true,
+  "hyper": {
+   "lam_mult": 1.0,
+   "s": 1.5,
+   "alpha": 0.5
+  }
+ },
+ "hipsc": {
+  "system": "hipsc",
+  "license": "MIT (figshare 26819743)",
+  "n_targets": 6352,
+  "n_genes": 6472,
+  "n_dev": 5131,
+  "n_final": 1221,
+  "dev": {
+   "best": "lam0.3|s1.5|a0.0",
+   "best_mae": 0.0483894864801527,
+   "base_mae": 0.04847615523869997
+  },
+  "final": {
+   "mae": 0.048186944599705614,
+   "zero_mae": 0.04838406131249708,
+   "base_mae": 0.04827368975598756,
+   "signal": 0.0492923520350101,
+   "signal_ci": [
+    0.04354396059497689,
+    0.055294118834176245
+   ],
+   "gain_vs_zero_percent": 0.4074000971484297,
+   "gain_vs_zero_ci": [
+    0.3580200186433258,
+    0.456721324086862
+   ],
+   "gain_vs_base_percent": 0.1796944810318512,
+   "gain_vs_base_ci": [
+    0.14265815269500182,
+    0.21858704402885923
+   ],
+   "base_signal": 0.0020178077080116883
+  },
+  "gates": {
+   "G1": false,
+   "G2": true,
+   "G3": true
+  },
+  "adopt": false,
+  "hyper": {
+   "lam_mult": 0.3,
+   "s": 1.5,
+   "alpha": 0.0
+  }
+ }
+}

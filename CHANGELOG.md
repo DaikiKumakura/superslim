@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.0
+- Default model is now `open-v4`: adds three predicted systems from essential-gene Perturb-seq screens (`rpe1_essential`, `jurkat_essential`, `hepg2_essential`; essential genes only). The seven earlier systems are unchanged; `open-v2` and `open-v3` stay available. Python and R (`r/`) share the version number.
+- The separate `superslim-models` repository is merged into this one: its documentation (model card, attribution, provenance, evaluation, licence) is in `models/`, and the model files (`open-v2`, `open-v3`, `open-v4`) are attached to the GitHub releases of this repository, so `download_model` now fetches from here. Versions 0.7.0 and earlier point to the removed `superslim-models` repository and can no longer download models; upgrade to 0.8.0. The archived model records (DOI 10.5281/zenodo.24395561) stay valid.
+
 ## 0.7.0
 - Adds the R interface (`r/`, base R, same predictions as the Python package; `pak::pak("DaikiKumakura/superslim/r")`). Version numbers of the two packages are kept equal. CI runs the R checks with golden values regenerated from the Python code. No change to the Python API.
 

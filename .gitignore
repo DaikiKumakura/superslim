@@ -3,7 +3,8 @@ build/
 dist/
 *.egg-info/
 .pytest_cache/
-# Model files derive from third-party data with mixed terms; never commit them (see docs/DATA_LICENSES.md)
+# Model files derive from third-party data with mixed terms; never commit them (see docs/DATA_LICENSES.md).
+# They are attached to the GitHub releases; models/ holds only their documentation.
 *.npz
 !r/tests/testthat/fixtures/*.npz
 r/tests/testthat/fixtures/golden_real.npz

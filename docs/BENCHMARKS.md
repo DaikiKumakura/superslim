@@ -1,6 +1,6 @@
 # Benchmarks
 
-Everything here concerns the released model `superslim_open_v3.npz` (4,725,210 bytes; repository [`superslim-models`](https://github.com/DaikiKumakura/superslim-models)). Two quantities are reported per held-out target: **MAE** over output genes, and **target-specific signal**, the correlation of the predicted and observed response after subtracting each gene's mean over targets (excluding the perturbed gene itself). Intervals are 95% bootstrap intervals over targets. Training used only development targets; held-out targets (about 20%) were split by a hash of the gene name, and settings were chosen by cross-validation inside the development targets. The released model is retrained on all targets, so these numbers describe the design on held-out genes, not the released fit.
+Everything here concerns the released model `superslim_open_v4.npz` (5,891,974 bytes; documentation in [`models/`](https://github.com/DaikiKumakura/superslim/tree/main/models)). Two quantities are reported per held-out target: **MAE** over output genes, and **target-specific signal**, the correlation of the predicted and observed response after subtracting each gene's mean over targets (excluding the perturbed gene itself). Intervals are 95% bootstrap intervals over targets. Training used only development targets; held-out targets (about 20%) were split by a hash of the gene name, and settings were chosen by cross-validation inside the development targets. The released model is retrained on all targets, so these numbers describe the design on held-out genes, not the released fit.
 
 ## 1. Held-out accuracy of every system
 
@@ -15,8 +15,11 @@ Gates were set in advance: signal lower bound above 0.05, and error below both p
 | `cd4_stim8hr` | 2,038 | 0.555 (0.547-0.562) | -16.79% | -16.32% |
 | `cd4_stim48hr` | 2,035 | 0.521 (0.513-0.530) | -14.81% | -14.44% |
 | `kolf2_strong` | 287 | 0.201 (0.172-0.228) | -12.75% | -2.04% |
+| `rpe1_essential` | 378 | 0.481 (0.444-0.515) | -21.10% | -13.27% |
+| `jurkat_essential` | 396 | 0.369 (0.344-0.393) | -10.73% | -8.06% |
+| `hepg2_essential` | 330 | 0.420 (0.389-0.451) | -15.41% | -12.21% |
 
-`kolf2_strong` covers strong-effect targets only (the source file keeps perturbations that differ significantly from non-targeting cells), so its numbers are not comparable with the genome-wide systems; it is a predicted system only and is not an input source for the others. A further candidate (hiPSC) did not pass (signal 0.049, lower bound 0.044) and is not predicted. The median response carries no target-specific signal (0.00), so the signal is what the model adds. **Read the CD4 numbers with care:** the three CD4 states come from the same experiment, so each state's prediction uses the same gene's measured response in the sibling states as input; the numbers apply to genes that are measured in a sibling state (see section 4). The genome-wide systems contain many genes with little effect, so their signals are small by nature.
+The three `*_essential` systems cover essential genes only (about 2,400 targeted genes per screen), so their numbers are not comparable with the genome-wide systems. `kolf2_strong` covers strong-effect targets only (the source file keeps perturbations that differ significantly from non-targeting cells), so its numbers are not comparable with the genome-wide systems; it is a predicted system only and is not an input source for the others. A further candidate (hiPSC) did not pass (signal 0.049, lower bound 0.044) and is not predicted. The median response carries no target-specific signal (0.00), so the signal is what the model adds. **Read the CD4 numbers with care:** the three CD4 states come from the same experiment, so each state's prediction uses the same gene's measured response in the sibling states as input; the numbers apply to genes that are measured in a sibling state (see section 4). The genome-wide systems contain many genes with little effect, so their signals are small by nature.
 
 
 ## 2. Comparison with a SLIM-style baseline
@@ -61,29 +64,32 @@ The curve is still rising at 100% for the genome-wide systems.
 
 ## 6. Runtime
 
-Windows 11, 12 logical CPUs, Python 3.12, NumPy 2.2, SuperSLIM 0.7.0.
+Windows 11, 12 logical CPUs, Python 3.12, NumPy 2.2, SuperSLIM 0.8.0.
 
 | Quantity | Value |
 |---|---|
-| Model file | 4,725,210 bytes |
-| Load (median of 5) | 316 ms |
-| Peak memory, all systems used | 118 MB |
+| Model file | 5,891,974 bytes |
+| Load (median of 5) | 747 ms |
+| Peak memory, all systems used | 129 MB |
 | Repeat calls and fresh load | bit-identical output, all values finite |
 
 | System | Output genes | One gene (ms, median) | Genes per second (batch of 1,000) |
 |---|---|---|---|
-| `k562_gwps` | 8,248 | 0.33 | 17,532 |
-| `hct116` | 14,685 | 0.87 | 8,316 |
-| `hek293t` | 14,685 | 0.90 | 11,189 |
-| `cd4_rest` | 6,089 | 0.29 | 21,966 |
-| `cd4_stim8hr` | 6,089 | 0.29 | 21,925 |
-| `cd4_stim48hr` | 6,089 | 0.29 | 23,081 |
-| `kolf2_strong` | 15,419 | 0.88 | 10,335 |
+| `k562_gwps` | 8,248 | 0.63 | 12,030 |
+| `hct116` | 14,685 | 1.75 | 7,598 |
+| `hek293t` | 14,685 | 2.02 | 7,964 |
+| `cd4_rest` | 6,089 | 0.70 | 16,147 |
+| `cd4_stim8hr` | 6,089 | 0.89 | 16,107 |
+| `cd4_stim48hr` | 6,089 | 0.55 | 15,152 |
+| `kolf2_strong` | 15,419 | 2.01 | 7,901 |
+| `hepg2_essential` | 9,624 | 0.64 | 10,211 |
+| `jurkat_essential` | 8,882 | 1.07 | 11,256 |
+| `rpe1_essential` | 8,749 | 1.00 | 10,748 |
 Reproduce: `python benchmarks/bench_runtime.py --model model.npz`.
 
 ## 7. Correctness
 
-- The package output equals an independent NumPy re-implementation written from the raw arrays (maximum absolute difference 0) for all seven systems, and is bit-identical across repeated calls and fresh loads (`verification.json` in the model repository).
+- The package output equals an independent NumPy re-implementation written from the raw arrays (maximum absolute difference 0) for all ten systems, and is bit-identical across repeated calls and fresh loads (`verification.json` in the model repository).
 - Nine synthetic-model tests, including fixed expected values and the command line, run in CI on Linux, Windows and macOS for Python 3.9-3.13, and with the oldest supported NumPy (1.22).
 
 ## 8. Limits

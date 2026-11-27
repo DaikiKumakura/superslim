@@ -1,0 +1,67 @@
+{
+ "systems": [
+  "k562_gwps",
+  "hct116",
+  "hek293t",
+  "cd4_rest",
+  "cd4_stim8hr",
+  "cd4_stim48hr",
+  "kolf2_strong",
+  "rpe1_essential",
+  "jurkat_essential",
+  "hepg2_essential"
+ ],
+ "info": {
+  "systems": [
+   "k562_gwps",
+   "hct116",
+   "hek293t",
+   "cd4_rest",
+   "cd4_stim8hr",
+   "cd4_stim48hr",
+   "kolf2_strong",
+   "rpe1_essential",
+   "jurkat_essential",
+   "hepg2_essential"
+  ],
+  "n_input_genes": 21688,
+  "n_output_genes": {
+   "k562_gwps": 8248,
+   "hct116": 14685,
+   "hek293t": 14685,
+   "cd4_rest": 6089,
+   "cd4_stim8hr": 6089,
+   "cd4_stim48hr": 6089,
+   "kolf2_strong": 15419,
+   "rpe1_essential": 8749,
+   "jurkat_essential": 8882,
+   "hepg2_essential": 9624
+  }
+ },
+ "P2": {
+  "k562_gwps": 0.0,
+  "hct116": 0.0,
+  "hek293t": 0.0,
+  "cd4_rest": 0.0,
+  "cd4_stim8hr": 0.0,
+  "cd4_stim48hr": 0.0,
+  "kolf2_strong": 0.0,
+  "rpe1_essential": 0.0,
+  "jurkat_essential": 0.0,
+  "hepg2_essential": 0.0
+ },
+ "P4": {
+  "k562_gwps": true,
+  "hct116": true,
+  "hek293t": true,
+  "cd4_rest": true,
+  "cd4_stim8hr": true,
+  "cd4_stim48hr": true,
+  "kolf2_strong": true,
+  "rpe1_essential": true,
+  "jurkat_essential": true,
+  "hepg2_essential": true
+ },
+ "P2_pass": true,
+ "P4_pass": true
+}

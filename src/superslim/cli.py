@@ -14,7 +14,7 @@ def main(argv=None) -> int:
     ap.add_argument("--version", action="version", version=f"superslim {__version__}")
     sub = ap.add_subparsers(dest="cmd", required=True)
     dl = sub.add_parser("download", help="download a released model file (SHA-256 checked)")
-    dl.add_argument("--name", default="open-v3")
+    dl.add_argument("--name", default="open-v4")
     dl.add_argument("--dest", help="folder (default: ~/.cache/superslim or $SUPERSLIM_HOME)")
     for name in ("info", "lines", "genes", "predict"):
         sp = sub.add_parser(name)

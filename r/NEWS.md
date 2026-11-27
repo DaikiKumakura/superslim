@@ -1,3 +1,7 @@
+# superslim 0.8.0
+
+* Default model is now `open-v4` (ten systems, adds `rpe1_essential`, `jurkat_essential`, `hepg2_essential`); `open-v2` and `open-v3` stay available. Version numbers follow the Python package.
+
 # superslim 0.7.0
 
 * First release of the R interface, now developed in the same repository as the Python package (`r/`); version numbers follow the Python package.
