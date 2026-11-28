@@ -52,5 +52,6 @@ test_that("the released model matches the Python package (needs SUPERSLIM_MODEL 
   for (line in ss_lines(m)) {
     p <- ss_predict(m, g$genes, line)
     expect_equal(unname(p$values), unname(g[[line]]), tolerance = 1e-5, label = line)
+    expect_lt(max(abs(unname(p$values) - unname(g[[line]]))), 1e-6, label = paste(line, "maximum absolute difference"))
   }
 })

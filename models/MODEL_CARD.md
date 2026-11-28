@@ -13,9 +13,9 @@
 | `hek293t` | X-Atlas/Orion HEK293T (CC BY-NC-SA 4.0) | 13,128 | 14,685 |
 | `cd4_rest`, `cd4_stim8hr`, `cd4_stim48hr` | Primary human CD4+ T-cell Perturb-seq pseudo-bulk (MIT, use terms) | 10,484 / 10,549 / 10,523 | 6,089 |
 | `kolf2_strong` | KOLF2.1J iPSC genome-scale CRISPRi atlas, "strong perturbations" file (CC BY 4.0) | 1,525 | 15,419 |
-| `rpe1_essential` | Replogle et al. 2022 RPE1 CRISPRi, essential-gene screen (CC BY 4.0) | 2,016 | 8,749 |
-| `jurkat_essential` | Nadig et al. Jurkat CRISPRi, essential-gene screen (CC BY 4.0 as redistributed by scPerturb) | 2,137 | 8,882 |
-| `hepg2_essential` | Nadig et al. HepG2 CRISPRi, essential-gene screen (CC BY 4.0 as redistributed by scPerturb) | 1,818 | 9,624 |
+| `rpe1_essential` | Replogle et al. 2022 RPE1 CRISPRi, essential-gene screen (CC BY 4.0) | 2,012 | 8,749 |
+| `jurkat_essential` | Nadig et al. Jurkat CRISPRi, essential-gene screen (CC BY 4.0 as redistributed by scPerturb) | 2,134 | 8,882 |
+| `hepg2_essential` | Nadig et al. HepG2 CRISPRi, essential-gene screen (CC BY 4.0 as redistributed by scPerturb) | 1,817 | 9,624 |
 
 An additional candidate, hiPSC (MIT), failed the pre-set accuracy gate as a predicted system (signal 0.049, lower bound 0.044 < 0.05). Its responses are used as an input feature source. Gene features: STRING embeddings, ESM-2, Reactome, Gene Ontology; no response data.
 

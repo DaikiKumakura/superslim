@@ -5,7 +5,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24393778.svg)](https://doi.org/10.5281/zenodo.24393778)
 <!-- badges: end -->
 
-A small, NumPy-only predictor of the **mean transcriptome response to knocking down a gene** in a fixed set of learned cell systems. The model file is about 4 MB; on a laptop CPU it loads in about 0.3 s, predicts one gene in about 0.3 to 0.9 ms (depending on the number of output genes), and needs about 120 MB of memory. No GPU, no PyTorch, no scikit-learn at inference time.
+A small, NumPy-only predictor of the **mean transcriptome response to knocking down a gene** in a fixed set of learned cell systems. The model file is about 5.9 MB; on a 12-thread Windows PC it loads in about 0.75 s, predicts one gene in about 0.5 to 2 ms (depending on the number of output genes), and needs about 130 MB of memory (measured in [docs/BENCHMARKS.md](docs/BENCHMARKS.md)). No GPU, no PyTorch, no scikit-learn at inference time.
 
 ## Installation
 
@@ -37,9 +37,11 @@ m.compare("TP53")                                # the same gene in every system
 Printed by these calls with the `open-v4` model (the top-10 call shown with `n=5`):
 
 ```text
-m.info()         {'systems': ['k562_gwps', 'hct116', 'hek293t', 'cd4_rest', 'cd4_stim8hr', 'cd4_stim48hr', 'kolf2_strong'],
+m.info()         {'systems': ['k562_gwps', 'hct116', 'hek293t', 'cd4_rest', 'cd4_stim8hr', 'cd4_stim48hr', 'kolf2_strong',
+                  'rpe1_essential', 'jurkat_essential', 'hepg2_essential'],
                   'n_input_genes': 21688, 'n_output_genes': {'k562_gwps': 8248, 'hct116': 14685, 'hek293t': 14685,
-                  'cd4_rest': 6089, 'cd4_stim8hr': 6089, 'cd4_stim48hr': 6089, 'kolf2_strong': 15419}}
+                  'cd4_rest': 6089, 'cd4_stim8hr': 6089, 'cd4_stim48hr': 6089, 'kolf2_strong': 15419,
+                  'rpe1_essential': 8749, 'jurkat_essential': 8882, 'hepg2_essential': 9624}}
 res.values.shape (2, 6089)
 res.top("EGFR", n=5, direction="down")
                  [('HSPD1', -0.2310), ('MYBL2', -0.2273), ('RRM2', -0.2253), ('TYMS', -0.2236), ('CDK1', -0.2164)]
@@ -48,7 +50,7 @@ m.compare("TP53") a dict with one entry per system
 
 Each value is the predicted change of the mean expression of that gene when the target is knocked down
 (negative: decreased). Rows of `res.values` are the genes you asked for, columns the output genes of the chosen
-system. The first call downloads the 4.7 MB model once (SHA-256 checked) and reuses the cached file.
+system. The first call downloads the 5.9 MB model once (SHA-256 checked) and reuses the cached file.
 
 ## Documentation
 

@@ -16,7 +16,7 @@ The model file is a derivative of the data below. Terms were checked on 2026-11-
 | **Reactome** pathways | gene features | CC0 |
 | **Gene Ontology** | gene features | CC BY 4.0 |
 
-Not used: Kaden et al. RPE1 data, A549 (GSE345058), H1 (Arc), HepG2 and Jurkat (GSE264667), K562 and RPE1 essential-gene screens, Pan et al. H1 pseudo-bulk — their terms are unverified or absent. `provenance.json` lists each input file with its SHA-256.
+Not used: Kaden et al. RPE1 data, A549 (GSE345058), H1 (Arc), Pan et al. H1 pseudo-bulk, the K562 essential-gene screen, and the original GEO deposit of the HepG2 and Jurkat data (GSE264667; the model uses the scPerturb redistribution listed above instead) — their terms are unverified or absent. `provenance.json` lists each input file with its SHA-256.
 
 ## Sharing
 
